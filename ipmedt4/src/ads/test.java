@@ -1,6 +1,6 @@
 package ads;
 
-public class Classssses {
+public class test {
   
 	private String st;
 
