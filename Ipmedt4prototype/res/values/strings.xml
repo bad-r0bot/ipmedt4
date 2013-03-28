@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Ipmedt4</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Gekke App</string>
+    <string name="action_settings">BITCHES</string>
     <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Opties Bitch</string>
+    <string name="itemtag_position">1</string>
 
 </resources>
