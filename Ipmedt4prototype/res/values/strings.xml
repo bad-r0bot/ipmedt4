@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Gekke App</string>
-    <string name="action_settings">BITCHES</string>
+    <string name="action_settings">Contact</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Opties Bitch</string>
     <string name="itemtag_position">1</string>
