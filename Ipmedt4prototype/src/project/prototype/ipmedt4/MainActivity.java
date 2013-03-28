@@ -41,12 +41,6 @@ public class MainActivity extends Activity
        	itemArrayList.add( new MyListItem( "Categorie 7" ) );
        	itemArrayList.add( new MyListItem( "Categorie 8" ) );
        	itemArrayList.add( new MyListItem( "Categorie 9" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 10" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 11" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 12" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 13" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 14" ) );
-       	itemArrayList.add( new MyListItem( "Categorie 15" ) );
         
         
         //we maken tot slot een adapter aan die de data (de arraylist) en de lijst (de listview) aan elkaar koppelt
