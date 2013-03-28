@@ -7,8 +7,9 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/oranje" />
 
 <LinearLayout
@@ -30,6 +31,7 @@
         android:id="@+id/widget35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="Settings" />
 
     <TextView
@@ -45,6 +47,7 @@
         android:id="@+id/widget36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:hint="Zoekfunctie"
         android:text=" Search " />
 
