@@ -1,7 +1,54 @@
 package org.webapp.ws;
 
-public class Hello {
-	 public String sayHello(String name) {
-	    return "Hello !!! " + name;
-	 }
-	}
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapPrimitive;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+  
+import android.widget.TextView;
+import android.app.Activity;
+import android.os.Bundle;
+  
+public class AndroidWSClientActivity extends Activity {
+   
+    private static final String SOAP_ACTION = "http://ws.android.com/sayHello";
+    private static final String METHOD_NAME = "sayHello";
+    private static final String NAMESPACE = "http://ws.android.com/";
+    private static final String URL = "http://175.157.229.119:8080/AndroidWSTest/services/PrintMsg?wsdl";
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
+       
+    Thread networkThread = new Thread() {
+    @Override
+    public void run() {
+      try {
+         SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);         
+         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+         envelope.setOutputSoapObject(request);
+           
+         HttpTransportSE ht = new HttpTransportSE(URL);
+         ht.call(SOAP_ACTION, envelope);
+         final  SoapPrimitive response = (SoapPrimitive)envelope.getResponse();
+         final String str = response.toString();
+  
+         runOnUiThread (new Runnable(){ 
+     public void run() {
+         TextView result;
+         result = (TextView)findViewById(R.id.textView1);//Text view id is textView1
+         result.setText(str);
+           }
+       });
+      }
+     catch (Exception e) {
+         e.printStackTrace();
+     }
+    }
+  };
+  networkThread.start();
+  }
+ }
+}
