@@ -32,21 +32,21 @@ public class MainActivity extends Activity
         ArrayList<MyListItem> itemArrayList = new ArrayList<MyListItem>();
         
         //en we voegen wat data aan de arraylist
-       	itemArrayList.add( new MyListItem( "Optie 1" ) );
-       	itemArrayList.add( new MyListItem( "Optie 2" ) );
-       	itemArrayList.add( new MyListItem( "Android is cool" ) );
-       	itemArrayList.add( new MyListItem( "ListView is lastig" ) );
-       	itemArrayList.add( new MyListItem( "Blauw is mooi" ) );
-       	itemArrayList.add( new MyListItem( "Groen is mooier" ) );
-       	itemArrayList.add( new MyListItem( "Java is leuk" ) );
-       	itemArrayList.add( new MyListItem( "Optie 8" ) );
-       	itemArrayList.add( new MyListItem( "Optie 9" ) );
-       	itemArrayList.add( new MyListItem( "Optie 10" ) );
-       	itemArrayList.add( new MyListItem( "Dit is een optie met heel veel text" ) );
-       	itemArrayList.add( new MyListItem( "Ik accepteer de gebruiksvoorwaarden" ) );
-       	itemArrayList.add( new MyListItem( "Stuur mij een nieuwsbrief" ) );
-       	itemArrayList.add( new MyListItem( "Optie 14" ) );
-       	itemArrayList.add( new MyListItem( "Optie 15" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 1" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 2" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 3" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 4" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 5" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 6" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 7" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 8" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 9" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 10" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 11" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 12" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 13" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 14" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 15" ) );
         
         
         //we maken tot slot een adapter aan die de data (de arraylist) en de lijst (de listview) aan elkaar koppelt
