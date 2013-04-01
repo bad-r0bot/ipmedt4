@@ -1,4 +1,4 @@
-package WebSrv;
+package project.prototype.backEndv2;
 
 public class ServiceTest 
 {
