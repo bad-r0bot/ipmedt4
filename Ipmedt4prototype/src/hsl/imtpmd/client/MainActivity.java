@@ -1,5 +1,6 @@
 package hsl.imtpmd.client;
 
+import project.prototype.ipmedt4.R;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
