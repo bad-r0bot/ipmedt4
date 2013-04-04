@@ -13,9 +13,9 @@
         android:src="@drawable/oranje" />
 
 <LinearLayout
-    android:layout_width="fill_parent"
+    android:layout_width="138dp"
     android:layout_height="match_parent"
-    android:layout_x="0dp"
+    android:layout_x="221dp"
     android:layout_y="120dp"
     android:orientation="vertical" >
 
@@ -36,7 +36,7 @@
     android:layout_y="0dp" >
 
     <Button
-        android:id="@+id/widget35"
+        android:id="@+id/widget37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -61,5 +61,21 @@
         android:text=" Search " />
 
 </LinearLayout>
+
+<Button
+    android:id="@+id/button1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_x="41dp"
+    android:layout_y="143dp"
+    android:text="Button" />
+
+<Button
+    android:id="@+id/button2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_x="33dp"
+    android:layout_y="257dp"
+    android:text="Button" />
 
 </AbsoluteLayout>

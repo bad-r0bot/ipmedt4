@@ -82,13 +82,11 @@ public class MainActivity extends Activity
 		button.setOnClickListener(new OnClickListener() {
  
 			@Override
-			public void onClick(View arg0) {
+            public void onClick(View view) {
  
-			  Intent browserIntent = 
-                            new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mkyong.com"));
-			    startActivity(browserIntent);
- 
-			}
+                Intent myIntent = new Intent(view.getContext(), Settings.class);
+                startActivityForResult(myIntent, 0);
+            }
  
 		});
  
