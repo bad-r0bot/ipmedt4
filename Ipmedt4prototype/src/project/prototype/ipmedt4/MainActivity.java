@@ -10,9 +10,17 @@ import android.util.Log;
 import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity
 {	
+	Button button;
 	//deze methode overriden we zodat we commando's kunnen uitvoeren zodra de applicatie is opgestart
 	//we voeren bijna nooit commando's uit in de constructor van een userinterface object, maar in de onCreate(...)
 	//de onCreate van deze Activity klasse wordt door Android aangeroepen als deze eenmaal goed en wel draait
@@ -21,7 +29,8 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
+		addListenerOnButton();
 
         //we willen een lijst zien met data uit een reeks van MyListView objecten
         //we halen eerst het ListView object op dat we in activity_main.xml hebben gedefinieerd m.b.v. findViewById( R.id.object_id )
@@ -65,5 +74,24 @@ public class MainActivity extends Activity
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    
+	public void addListenerOnButton() {
+		 
+		button = (Button) findViewById(R.id.widget35);
+ 
+		button.setOnClickListener(new OnClickListener() {
+ 
+			@Override
+			public void onClick(View arg0) {
+ 
+			  Intent browserIntent = 
+                            new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mkyong.com"));
+			    startActivity(browserIntent);
+ 
+			}
+ 
+		});
+ 
+	}
     
 }
