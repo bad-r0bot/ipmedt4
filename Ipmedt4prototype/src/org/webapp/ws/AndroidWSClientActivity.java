@@ -5,6 +5,8 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
+
+import project.prototype.ipmedt4.R;
   
 import android.widget.TextView;
 import android.app.Activity;
@@ -51,4 +53,3 @@ public class AndroidWSClientActivity extends Activity {
   networkThread.start();
   }
  }
-}
