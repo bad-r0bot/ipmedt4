@@ -91,9 +91,9 @@ public class MainActivity extends Activity
  
 		});
 		 
-		settings = (Button) findViewById(R.id.widget36);
+		search = (Button) findViewById(R.id.widget36);
 
-		settings.setOnClickListener(new OnClickListener() {
+		search.setOnClickListener(new OnClickListener() {
 
 			@Override
            public void onClick(View view) {
