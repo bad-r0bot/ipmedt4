@@ -20,7 +20,8 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity
 {	
-	Button button;
+	Button settings;
+	Button search;
 	//deze methode overriden we zodat we commando's kunnen uitvoeren zodra de applicatie is opgestart
 	//we voeren bijna nooit commando's uit in de constructor van een userinterface object, maar in de onCreate(...)
 	//de onCreate van deze Activity klasse wordt door Android aangeroepen als deze eenmaal goed en wel draait
@@ -77,9 +78,9 @@ public class MainActivity extends Activity
     
 	public void addListenerOnButton() {
 		 
-		button = (Button) findViewById(R.id.widget35);
+		settings = (Button) findViewById(R.id.widget35);
  
-		button.setOnClickListener(new OnClickListener() {
+		settings.setOnClickListener(new OnClickListener() {
  
 			@Override
             public void onClick(View view) {
@@ -89,7 +90,21 @@ public class MainActivity extends Activity
             }
  
 		});
+		 
+		settings = (Button) findViewById(R.id.widget36);
+
+		settings.setOnClickListener(new OnClickListener() {
+
+			@Override
+           public void onClick(View view) {
+
+               Intent myIntent = new Intent(view.getContext(), Search.class);
+               startActivityForResult(myIntent, 0);
+           }
+
+		});
  
 	}
+	
     
 }

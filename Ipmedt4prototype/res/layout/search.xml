@@ -14,16 +14,16 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="176dp"
+        android:layout_width="185dp"
         android:layout_height="486dp"
-        android:layout_x="0dp"
+        android:layout_x="175dp"
         android:layout_y="80dp"
-        android:src="@drawable/grey" />
+        android:src="@drawable/grey2" />
 
 <LinearLayout
     android:layout_width="175dp"
     android:layout_height="match_parent"
-    android:layout_x="175dp"
+    android:layout_x="0dp"
     android:layout_y="80dp"
     android:orientation="vertical" >
 
@@ -38,8 +38,9 @@
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="176dp"
+    android:layout_width="185dp"
     android:layout_height="match_parent"
+    android:layout_x="175dp"
     android:layout_y="80dp"
     android:orientation="vertical" >
 
@@ -47,19 +48,22 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings" />
+        android:text="Search" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Optie 1" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Optie 2" />
+        android:text="Ok" />
 
 </LinearLayout>
 
@@ -74,25 +78,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Categorieën" />
+        android:text="Settings" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Settings"
+        android:text="Search"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/widget36"
+        android:id="@+id/widget38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:hint="Zoekfunctie"
-        android:text=" Search " />
+        android:text="Categorieën" />
 
 </LinearLayout>
 
