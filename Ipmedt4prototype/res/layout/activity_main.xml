@@ -8,9 +8,9 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/oranje" /> 
+        android:layout_height="161dp"
+        android:layout_weight="1"
+        android:src="@drawable/untitled2" />
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -32,7 +32,7 @@
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="80dp"
-    android:layout_x="0dp"
+    android:layout_x="3dp"
     android:layout_y="0dp" >
 
     <Button
@@ -59,7 +59,6 @@
         android:layout_weight="1"
         android:hint="Zoekfunctie"
         android:text=" Search " />
-
 </LinearLayout>
 
 </AbsoluteLayout>
