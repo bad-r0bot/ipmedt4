@@ -72,32 +72,22 @@ public class MyListAdapter extends BaseAdapter implements OnCheckedChangeListene
 			        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);;
 			convertView = inflater.inflate( R.layout.listview_item, parent, false );
 			
-			//we slaan de positie op in de convertView's tag om later op te halen en input uit te lezen
-			CheckBox itemCheckBox = (CheckBox) convertView.findViewById( R.id.itemcheckbox );
-			itemCheckBox.setTag( R.string.itemtag_position, position );
-			
-			//tot slot van rekening willen we opvangen wanneer de checkbox wordt ingedrukt.
-			//We hangen een checkedChangeListener aan de checkbox
-			itemCheckBox.setOnCheckedChangeListener( this );
-		}
+			}
 		
 		//haal het item op uit de lijst dat op de meegegeven positie getoond moet worden
 		MyListItem item = itemArrayList.get(position);
 		
 		//vind het TextView en de CheckBox interface objecten waar de naam en de check van het item in moet komen
 		TextView itemNaam = (TextView) convertView.findViewById( R.id.itemnaam );
-		CheckBox itemCheckBox = (CheckBox) convertView.findViewById( R.id.itemcheckbox );
+		itemNaam.setTag( R.string.itemtag_position, position );
 		
 		//vul het TextView in met de naam van het item
 		itemNaam.setText(item.getText());
 		
 		
 		//update de huidige positie van de checkbox in de zichtbare lijst
-		itemCheckBox.setTag( R.string.itemtag_position, position );
+		itemNaam.setTag( R.string.itemtag_position, position );
 
-		//stel de checkbox in op checked of unchecked
-		itemCheckBox.setChecked( item.getChecked());
-		
 		return convertView;
 	}
 

@@ -12,12 +12,4 @@
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <CheckBox
-        android:id="@+id/itemcheckbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/oranje"
-        android:focusable="false"
-        android:text="CheckBox" />
-
 </LinearLayout>
