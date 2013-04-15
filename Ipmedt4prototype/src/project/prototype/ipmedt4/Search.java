@@ -77,7 +77,7 @@ public class Search extends Activity
     
 	public void addListenerOnButton() {
 		 
-		button1 = (Button) findViewById(R.id.widget38);
+		button1 = (Button) findViewById(R.id.terug);
  
 		button1.setOnClickListener(new OnClickListener() {
  

@@ -77,7 +77,7 @@ public class Settings extends Activity
     
 	public void addListenerOnButton() {
 		 
-		button = (Button) findViewById(R.id.widget37);
+		button = (Button) findViewById(R.id.terug);
  
 		button.setOnClickListener(new OnClickListener() {
  

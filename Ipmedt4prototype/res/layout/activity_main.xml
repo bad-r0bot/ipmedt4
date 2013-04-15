@@ -27,7 +27,7 @@
     android:layout_height="80dp"
     android:layout_x="0dp"
     android:layout_y="0dp"
-    android:background="@drawable/oranje" >
+    android:background="@drawable/border" >
 
     <Button
         android:id="@+id/widget35"
