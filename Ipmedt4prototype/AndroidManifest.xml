@@ -33,6 +33,11 @@
               android:screenOrientation="portrait">
             
         </activity>
+                        <activity 
+            android:name="project.prototype.ipmedt4.Contact"
+              android:screenOrientation="portrait">
+            
+        </activity>
     </application>
 
 </manifest>
