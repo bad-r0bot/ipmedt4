@@ -1,4 +1,4 @@
-package test.sql.test2;
+package project.prototype.ipmedt4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
