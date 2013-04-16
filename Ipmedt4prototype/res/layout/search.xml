@@ -12,83 +12,142 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="80dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="88"
             android:background="@drawable/border" >
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="Search"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/terug"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Zoekfunctie"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
                 android:text="Terug" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" >
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="60"
-                android:orientation="vertical" >
+                android:layout_weight="96"
+                android:background="@drawable/side1" >
+            </LinearLayout>
 
-                <ListView
-                    android:id="@+id/listview"
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2" >
+
+                <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:focusable="false"
-                    android:focusableInTouchMode="true" >
-                </ListView>
+                    android:layout_weight="50"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/listview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true" >
+                    </ListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="50"
+                    android:background="@drawable/menu2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/menu1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/TextView01"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:shadowColor="#000000"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="6"
+                            android:text="Search"
+                            android:textColor="#0066ff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/editText1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:scrollHorizontally="false"
+                            android:selectAllOnFocus="true"
+                            android:singleLine="true" >
+
+                            <requestFocus />
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ok" />
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="40"
-                android:background="@drawable/menus"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Search" />
-
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:lines="1"
-                    android:maxLines="1"
-                    android:scrollHorizontally="false"
-                    android:selectAllOnFocus="true"
-                    android:singleLine="true" >
-
-                    <requestFocus />
-                </EditText>
-
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ok" />
+                android:layout_weight="96"
+                android:background="@drawable/side2" >
             </LinearLayout>
-
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="92"
+            android:background="@drawable/bottom" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="bottom|left"
+                android:text="© 2013   Groep2 - Ipmedt4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
 </AbsoluteLayout>

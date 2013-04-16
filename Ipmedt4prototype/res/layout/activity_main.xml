@@ -96,6 +96,14 @@
             android:layout_weight="92"
             android:background="@drawable/bottom" >
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="bottom|left"
+                android:text="© 2013   Groep2 - Ipmedt4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
