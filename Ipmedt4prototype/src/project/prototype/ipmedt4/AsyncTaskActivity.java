@@ -40,6 +40,8 @@ public class AsyncTaskActivity extends Activity {
 	private static final String TAG_PRODUCTS = "products";
 	private static final String TAG_PID = "pid";
 	private static final String TAG_NAME = "name";
+	private String column;
+	private String searchString;
 	
 	TextView txt;
 	Button btn_start;
@@ -66,6 +68,26 @@ public class AsyncTaskActivity extends Activity {
 				new ShowDialogAsyncTask().execute();
 			}
 		});
+	}
+
+
+	public String getSearchString() {
+		return searchString;
+	}
+
+
+	public void setSearchString(String searchString) {
+		this.searchString = searchString;
+	}
+
+
+	public String getColumn() {
+		return column;
+	}
+
+
+	public void setColumn(String column) {
+		this.column = column;
 	}
 
 
