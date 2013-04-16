@@ -116,7 +116,7 @@ public class MainActivity extends Activity
 			@Override
            public void onClick(View view) {
 
-               Intent myIntent = new Intent(view.getContext(), Search.class);
+               Intent myIntent = new Intent(view.getContext(), SearchMenu.class);
                startActivityForResult(myIntent, 0);
            }
 
