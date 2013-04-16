@@ -5,83 +5,89 @@
 	android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 
-<LinearLayout
-    android:layout_width="175dp"
-    android:layout_height="match_parent"
-    android:layout_x="0dp"
-    android:layout_y="80dp"
-    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="187dp"
-        android:layout_height="486dp"
-        android:focusable="false"
-        android:focusableInTouchMode="true" >
-    </ListView>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/border" >
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Search"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-<LinearLayout
-    android:layout_width="185dp"
-    android:layout_height="match_parent"
-    android:layout_x="175dp"
-    android:layout_y="80dp"
-    android:background="@drawable/menus"
-    android:orientation="vertical" >
+            <Button
+                android:id="@+id/terug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Zoekfunctie"
+                android:text="Terug" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:lines="1"
-        android:maxLines="1"
-        android:scrollHorizontally="false"
-        android:selectAllOnFocus="true"
-        android:singleLine="true" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
 
-    </EditText>
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="187dp"
+                    android:layout_height="486dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true" >
+                </ListView>
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ok" />
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menus"
+                android:orientation="vertical" >
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search" />
 
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="80dp"
-    android:layout_x="0dp"
-    android:layout_y="0dp"
-    android:background="@drawable/border" >
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="false"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Search"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+                    <requestFocus />
+                </EditText>
 
-    <Button
-        android:id="@+id/terug"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Zoekfunctie"
-        android:text="Terug" />
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ok" />
+            </LinearLayout>
 
-</LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </AbsoluteLayout>

@@ -46,6 +46,12 @@ public class MainActivity extends Activity
        	itemArrayList.add( new MyListItem( "Categorie 7" ) );
        	itemArrayList.add( new MyListItem( "Categorie 8" ) );
        	itemArrayList.add( new MyListItem( "Categorie 9" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 10" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 11" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 12" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 13" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 14" ) );
+       	itemArrayList.add( new MyListItem( "Categorie 15" ) );
         
         
         //creeer een nieuwe listadapter
