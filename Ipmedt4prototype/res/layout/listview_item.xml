@@ -8,8 +8,14 @@
         android:id="@+id/itemnaam"
         android:layout_width="match_parent"
         android:layout_height="96dp"
-        android:gravity="center_horizontal"
+        android:gravity="bottom|center_horizontal"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="10"
         android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#28a228"
+        android:textSize="40sp" />
 
 </LinearLayout>
