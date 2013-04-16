@@ -3,57 +3,59 @@
 	android:id="@+id/widget34"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android"> 
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="match_parent"
-    android:layout_x="0dp"
-    android:layout_y="80dp"
-    android:orientation="vertical" >
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="fill_parent"
-        android:layout_height="489dp"
-        android:focusable="false"
-        android:focusableInTouchMode="true" >
-    </ListView>
-
-</LinearLayout>
-
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="80dp"
-    android:layout_x="0dp"
-    android:layout_y="0dp"
-    android:background="@drawable/border" >
-
-    <Button
-        android:id="@+id/widget35"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Settings" />
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Categorieën"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/border" >
 
-    <Button
-        android:id="@+id/widget36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Zoekfunctie"
-        android:text=" Search " />
+            <Button
+                android:id="@+id/widget35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Settings" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Categorieën"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/widget36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Zoekfunctie"
+                android:text=" Search " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="true" >
+            </ListView>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </AbsoluteLayout>
