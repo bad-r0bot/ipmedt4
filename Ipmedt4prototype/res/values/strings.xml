@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Ruwe Testversie 2.3a</string>
-    <string name="contact">Contact</string>
+    <string name="contact">Info</string>
     <string name="hello_world">Hello world!</string>
     <string name="itemtag_position">1</string>
 

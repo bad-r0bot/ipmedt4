@@ -13,13 +13,46 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="6" >
+            android:layout_weight="88"
+            android:background="@drawable/border" >
+
+            <Button
+                android:id="@+id/widget35"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:text="Settings" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Categorieën"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/widget36"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:hint="Zoekfunctie"
+                android:text=" Search " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="96"
-                android:background="@drawable/side" >
+                android:background="@drawable/side1" >
             </LinearLayout>
 
             <LinearLayout
@@ -32,37 +65,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/border" >
-
-                        <Button
-                            android:id="@+id/widget35"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Settings" />
-
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Categorieën"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/widget36"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Zoekfunctie"
-                            android:text=" Search " />
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -84,15 +86,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="96"
-                android:background="@drawable/side" >
+                android:background="@drawable/side2" >
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="94"
-            android:background="@drawable/side" >
+            android:layout_weight="92"
+            android:background="@drawable/bottom" >
 
         </LinearLayout>
 
