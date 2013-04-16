@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="project.prototype.ipmedt4"
-    android:versionCode="1"
-    android:versionName="1.0" >
+	package="project.prototype.ipmedt4"
+	android:versionCode="3"
+	android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+	<uses-sdk
+		android:minSdkVersion="14"
+		android:targetSdkVersion="17" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/pir"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name="project.prototype.ipmedt4.MainActivity"
-              android:label="@string/app_name"
-              >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/pir"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme" android:enabled="true">
+		<activity
+			android:name="project.prototype.ipmedt4.MainActivity"
+			  android:label="@string/app_name"
+			  >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity 
-            android:name="project.prototype.ipmedt4.Settings"
-              android:screenOrientation="portrait">
-            
-        </activity>
-                <activity 
-            android:name="project.prototype.ipmedt4.Search"
-              android:screenOrientation="portrait">
-            
-        </activity>
-                        <activity 
-            android:name="project.prototype.ipmedt4.Contact"
-              android:screenOrientation="portrait">
-            
-        </activity>
-    </application>
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity 
+			android:name="project.prototype.ipmedt4.Settings"
+			  android:screenOrientation="portrait">
+			
+		</activity>
+				<activity 
+			android:name="project.prototype.ipmedt4.Search"
+			android:screenOrientation="portrait">
+			
+			<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+				android:label="@string/app_label"
+				android:hint="@string/search_hint" >
+			</searchable>
+			
+		</activity>
+						<activity 
+			android:name="project.prototype.ipmedt4.Contact"
+			  android:screenOrientation="portrait">
+			
+		</activity>
+	</application>
+	
+	
 
 </manifest>
