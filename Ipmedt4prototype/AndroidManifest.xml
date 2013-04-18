@@ -38,6 +38,11 @@
               android:screenOrientation="portrait">
             
         </activity>
+                                <activity 
+            android:name="project.prototype.ipmedt4.Categorie1"
+              android:screenOrientation="portrait">
+            
+        </activity>
     </application>
 
 </manifest>

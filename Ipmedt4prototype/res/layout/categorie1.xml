@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget34"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="88"
+            android:background="@drawable/border" >
+
+            <Button
+                android:id="@+id/widget35"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:text="Settings" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Categorieën"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/widget36"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:hint="Zoekfunctie"
+                android:text=" Search " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="20" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="96"
+                android:background="@drawable/side1" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2" >
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical"
+
+    >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_launcher"
+        android:gravity="bottom|center_horizontal"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="Item 1"
+        android:textColor="#FF0040"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/pir"
+        android:gravity="bottom|center_horizontal"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="Item 2"
+        android:textColor="#FF0040"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:text="Button" />
+
+</LinearLayout>
+    </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="96"
+                android:background="@drawable/side2" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="92"
+            android:background="@drawable/bottom" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:gravity="bottom|left"
+                android:text="© 2013   Groep2 - Ipmedt4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="70"
+                android:text="Terug" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</AbsoluteLayout>

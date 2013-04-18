@@ -14,19 +14,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class MainActivity extends Activity
+public class Categorie1 extends Activity
 {	
 	Button settings;
 	Button search;
 	Button contact;
 	Button categorie1;
+	Button terug;
 	//laadt de XML in
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
     	//koppel de xml aan de java
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.categorie1);
         
 		addListenerOnButton();
 
@@ -100,13 +101,23 @@ public class MainActivity extends Activity
 			@Override
            public void onClick(View view) {
 
-               Intent myIntent = new Intent(view.getContext(), Categorie1
-            		   .class);
+               Intent myIntent = new Intent(view.getContext(), Search.class);
                startActivityForResult(myIntent, 0);
            }
 
 		});
+		terug = (Button) findViewById(R.id.button5);
+
+		terug.setOnClickListener(new OnClickListener() {
+
+			@Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
  
+		});
 	}
 	
     
