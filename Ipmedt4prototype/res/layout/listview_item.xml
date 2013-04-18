@@ -8,6 +8,7 @@
         android:id="@+id/itemnaam"
         android:layout_width="match_parent"
         android:layout_height="96dp"
+        android:background="@drawable/pir"
         android:gravity="bottom|center_horizontal"
         android:shadowColor="#000000"
         android:shadowDx="3"
