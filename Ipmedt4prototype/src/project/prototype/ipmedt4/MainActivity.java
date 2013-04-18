@@ -19,7 +19,7 @@ public class MainActivity extends Activity
 	Button settings;
 	Button search;
 	Button contact;
-	//laad de XML in
+	//laadt de XML in
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

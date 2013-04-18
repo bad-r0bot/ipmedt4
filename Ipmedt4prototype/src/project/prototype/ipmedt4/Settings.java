@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.app.Activity;
@@ -21,23 +22,22 @@ import android.view.View.OnClickListener;
 public class Settings extends Activity
 {	
 	Button button;
-	//deze methode overriden we zodat we commando's kunnen uitvoeren zodra de applicatie is opgestart
-	//we voeren bijna nooit commando's uit in de constructor van een userinterface object, maar in de onCreate(...)
-	//de onCreate van deze Activity klasse wordt door Android aangeroepen als deze eenmaal goed en wel draait
+	Button button1;
+	//laden van XML
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+    	//het koppelen van de xml aan java
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
         
 		addListenerOnButton();
 
-        //we willen een lijst zien met data uit een reeks van MyListView objecten
-        //we halen eerst het ListView object op dat we in activity_main.xml hebben gedefinieerd m.b.v. findViewById( R.id.object_id )
+		//laadt het listview object
         ListView listView = (ListView) this.findViewById( R.id.listview );
         
         
-        //we maken een nieuwe arraylist waar we al onze data in zetten
+        //we maken een nieuwe arraylist        
         ArrayList<MyListItem> itemArrayList = new ArrayList<MyListItem>();
         
         //en we voegen wat data aan de arraylist
@@ -58,28 +58,41 @@ public class Settings extends Activity
        	itemArrayList.add( new MyListItem( "Categorie 15" ) );
         
         
-        //we maken tot slot een adapter aan die de data (de arraylist) en de lijst (de listview) aan elkaar koppelt
-        //eerst een nieuwe adapter maken waar we de data (arraylist) aan meegeven
+      //creeër een nieuwe listadapter voor het doorvoeren van de arraylist
 		MyListAdapter arrayAdapter = new MyListAdapter( itemArrayList );
 		
-		//dan de adapter aan de lijst koppelen
+		//koppel de adapter aan de eerder gemaakte lijst
 		listView.setAdapter( arrayAdapter );
 		
-		
-		//op deze manier hebben we een complete scheiding tussen businesslaag en presentatielaag
-		//de adapter is de mediator tussen de twee lagen, alle communicatie van en naar beide lagen verloopt via de adapter
     }
 
     
-    //deze methode overriden we en vullen we zelf in, zodat we een werkende menubalk hebben
-    //de code wordt automatisch gegenereerd bij het maken van een nieuw android project
+    //maak een menubalk
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //vul de menubalk
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // verwijs de info knop door naar het info scherm.
+        switch (item.getItemId()) {
+        case R.id.contact:
+            openContact(button);
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
+    
+
+	private void openContact(View view) {
+
+               Intent myIntent = new Intent(view.getContext(), Contact.class);
+               startActivityForResult(myIntent, 0);
+           }
     
 	public void addListenerOnButton() {
 		 
