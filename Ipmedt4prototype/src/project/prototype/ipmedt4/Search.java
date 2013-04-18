@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.app.Activity;
@@ -21,6 +22,8 @@ import android.view.View.OnClickListener;
 public class Search extends Activity
 {	
 	Button button1;
+	Button search;
+	Button contact;
 	//deze methode overriden we zodat we commando's kunnen uitvoeren zodra de applicatie is opgestart
 	//we voeren bijna nooit commando's uit in de constructor van een userinterface object, maar in de onCreate(...)
 	//de onCreate van deze Activity klasse wordt door Android aangeroepen als deze eenmaal goed en wel draait
@@ -79,7 +82,24 @@ public class Search extends Activity
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // verwijs de info knop door naar het info scherm.
+        switch (item.getItemId()) {
+        case R.id.contact:
+            openContact(button1);
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
     
+
+	private void openContact(View view) {
+
+               Intent myIntent = new Intent(view.getContext(), Contact.class);
+               startActivityForResult(myIntent, 0);
+           }
 	public void addListenerOnButton() {
 		 
 		button1 = (Button) findViewById(R.id.terug);
