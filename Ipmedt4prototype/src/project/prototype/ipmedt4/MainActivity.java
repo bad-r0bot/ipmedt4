@@ -75,7 +75,7 @@ public class MainActivity extends Activity
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
+        // verwijs de info knop door naar het info scherm.
         switch (item.getItemId()) {
         case R.id.contact:
             openContact(search);
