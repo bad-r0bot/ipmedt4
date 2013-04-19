@@ -6,34 +6,33 @@ package project.prototype.ipmedt4.model;
 //in dit geval: checkbox aan/uit zetten
 public class MyListItem
 {
-	//deze
+	// deze
 	private String naam;
 	private Boolean checked;
-	
-	public MyListItem( String naam )
+
+	public MyListItem(String naam)
 	{
 		this.naam = naam;
 		this.checked = false;
 	}
-	
-	public void setText( String text )
+
+	public void setText(String text)
 	{
 		this.naam = text;
 	}
-	
+
 	public String getText()
 	{
-		return(naam);
+		return (naam);
 	}
-	
-	
-	public void setChecked( boolean checked )
+
+	public void setChecked(boolean checked)
 	{
 		this.checked = checked;
 	}
-	
+
 	public boolean getChecked()
 	{
-		return(checked);
+		return (checked);
 	}
 }
