@@ -14,6 +14,7 @@ public class Categorie1 extends Activity
 	Button settings;
 	Button search;
 	Button terug;
+	Button item1;
 	//laadt de XML in
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -98,6 +99,19 @@ public class Categorie1 extends Activity
                 finish();
             }
  
+		});
+		
+		item1 = (Button) findViewById(R.id.settings);
+
+		item1.setOnClickListener(new OnClickListener() {
+			//koppel de button aan een nieuw xml scherm wat opent
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
+				startActivityForResult(myIntent, 0);
+			}
+
 		});
 	}
 	
