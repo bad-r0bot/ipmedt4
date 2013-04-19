@@ -1,13 +1,8 @@
 package project.prototype.ipmedt4;
 
-import project.prototype.ipmedt4.model.MyListItem;
-
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.ListView;
 import android.content.Intent;
 import android.widget.Button;
 import android.view.MenuItem;
@@ -18,8 +13,6 @@ public class Categorie1 extends Activity
 {	
 	Button settings;
 	Button search;
-	Button contact;
-	Button categorie1;
 	Button terug;
 	//laadt de XML in
     @Override
@@ -50,8 +43,8 @@ public class Categorie1 extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
         // verwijs de info knop door naar het info scherm.
         switch (item.getItemId()) {
-        case R.id.contact:
-            openContact(search);
+        case R.id.info:
+            openContact(settings);
             return true;
         default:
             return super.onOptionsItemSelected(item);
@@ -61,52 +54,40 @@ public class Categorie1 extends Activity
 
 	private void openContact(View view) {
 
-               Intent myIntent = new Intent(view.getContext(), Contact.class);
+               Intent myIntent = new Intent(view.getContext(), Info.class);
                startActivityForResult(myIntent, 0);
            }
 
 
 	//maak een listener die buttons de mogelijkheid geeft om ingedrukt te worden
 	public void addListenerOnButton() {
-		 //koppel de button code aan een widget en voeg een onclicklistener toe
-		settings = (Button) findViewById(R.id.widget35);
- 
+		
+		settings = (Button) findViewById(R.id.settings);
+
 		settings.setOnClickListener(new OnClickListener() {
 			//koppel de button aan een nieuw xml scherm wat opent
 			@Override
-            public void onClick(View view) {
- 
-                Intent myIntent = new Intent(view.getContext(), Settings.class);
-                startActivityForResult(myIntent, 0);
-            }
- 
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), Settings.class);
+				startActivityForResult(myIntent, 0);
+			}
+
 		});
-		 //zelfde als bovenstaande button
-		search = (Button) findViewById(R.id.widget36);
+
+		search = (Button) findViewById(R.id.search);
 
 		search.setOnClickListener(new OnClickListener() {
 
 			@Override
-           public void onClick(View view) {
+			public void onClick(View view) {
 
-               Intent myIntent = new Intent(view.getContext(), Search.class);
-               startActivityForResult(myIntent, 0);
-           }
-
+				Intent myIntent = new Intent(view.getContext(), Search.class);
+				startActivityForResult(myIntent, 0);
+			}
 		});
-		categorie1 = (Button) findViewById(R.id.button1);
-
-		categorie1.setOnClickListener(new OnClickListener() {
-
-			@Override
-           public void onClick(View view) {
-
-               Intent myIntent = new Intent(view.getContext(), Search.class);
-               startActivityForResult(myIntent, 0);
-           }
-
-		});
-		terug = (Button) findViewById(R.id.button5);
+	
+		terug = (Button) findViewById(R.id.terug);
 
 		terug.setOnClickListener(new OnClickListener() {
 
