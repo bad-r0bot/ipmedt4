@@ -43,6 +43,11 @@
               android:screenOrientation="portrait">
             
         </activity>
+
+        <activity 
+            android:name="project.prototype.ipmedt4.AsyncTaskPull"
+              android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
