@@ -95,7 +95,7 @@ public class AsyncTaskPull extends Activity {
 			nameValuePairs.add(new BasicNameValuePair("naam","test"));
 			
 			// In test.php goes the SQL query.
-			String URL = "http://10.0.2.2/android_connect/test.php";
+			String URL = "http://10.0.2.2:8080/android_connect/test.php";
 
 
 			//http post
