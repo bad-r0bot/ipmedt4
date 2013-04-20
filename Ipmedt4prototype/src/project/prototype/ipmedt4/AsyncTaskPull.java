@@ -44,6 +44,9 @@ public class AsyncTaskPull extends Activity {
 	Button btn_start;
 	ProgressBar progressBar;
 	TextView txt_percentage;
+	
+	// Creating JSON Parser object
+	JSONParser jParser = new JSONParser();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -134,24 +137,13 @@ public class AsyncTaskPull extends Activity {
 					JSONObject json_data = jArray.getJSONObject(i);
 					Log.i("log_tag"," Ville_ID: "+json_data.getString("Ville_ID")  );
 					
-					/*
-					String jsonStrA = json_data.getString("Ville_ID");
-					JSONObject myJsonObjA = new JSONObject(jsonStrA);
-					
-					String villeID = myJsonObjA.getString("Ville_ID");
-					
-					String jsonStrB = json_data.getString("Ville");
-					JSONObject myJsonObjB = new JSONObject(jsonStrB);
-					String ville = myJsonObjB.getString("Ville");
-					*/
-					
 					//Get an output to the screen
 					returnString += "\n\t" + jArray.getJSONObject(i); 
 					
 					
 				}
 				
-				String jsonString = returnString;
+				//String jsonString = returnString;
 
 				
 			}
