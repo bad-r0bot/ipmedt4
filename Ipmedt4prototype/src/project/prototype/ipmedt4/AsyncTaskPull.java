@@ -98,17 +98,24 @@ public class AsyncTaskPull extends Activity {
 			nameValuePairs.add(new BasicNameValuePair("naam","test"));
 			
 			// In test.php goes the SQL query.
-			String URL = "http://10.0.2.2:8080/android_connect/test.php";
+			String URL = "http://10.0.2.2/android_connect/test.php";
+			System.out.println("Query");
 
 
 			//http post
 			try{
 				HttpClient httpclient = new DefaultHttpClient();
+				System.out.println("1");				
 				HttpPost httppost = new HttpPost(URL);
+				System.out.println("2");
 				httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+				System.out.println("3");
 				HttpResponse response = httpclient.execute(httppost);
+				System.out.println("4");
 				HttpEntity entity = response.getEntity();
+				System.out.println("5");
 				is = entity.getContent();
+				System.out.println("Http setup");
 
 
 			}catch(Exception e){
@@ -124,34 +131,37 @@ public class AsyncTaskPull extends Activity {
 				}
 				is.close();
 				result=sb.toString();
+				System.out.println("BufferedRead");
 			}catch(Exception e){
 				Log.e("log_tag", "Error converting result "+e.toString());
 			}
 			//parse json data
 			String returnString = null;
 			try{
-				JSONArray jArray = new JSONArray(result);
+				//JSONArray jArray = new JSONArray(result);
+				JSONObject json_data = new JSONObject(result);
+				JSONArray nameArray = json_data.names();
+				JSONArray valArray = json_data.toJSONArray(nameArray);
 				// Loop om alles in de collumns te vinden.
+				/*
 				for(int i=0;i<jArray.length();i++)
 				{
 					JSONObject json_data = jArray.getJSONObject(i);
 					Log.i("log_tag"," Ville_ID: "+json_data.getString("Ville_ID")  );
 					
 					//Get an output to the screen
-					returnString += "\n\t" + jArray.getJSONObject(i); 
-					
-					
+					returnString += "\n\t" + jArray.getJSONObject(i);	
 				}
-				
-				//String jsonString = returnString;
-
-				
+				*/
+			
 			}
 			
 			catch(JSONException e)
 			{
 				Log.e("log_tag", "Error parsing data "+e.toString());
+				System.out.println("JSONParse" + e.toString());
 			}
+			
 			return returnString; 
 
 		}  
@@ -165,10 +175,9 @@ public class AsyncTaskPull extends Activity {
 					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 	
 			txt.setText(result); 
-			
-			
 
 			btn_start.setEnabled(true);
+			System.out.println("TA-DAH!");
 		}
 	}
 }
