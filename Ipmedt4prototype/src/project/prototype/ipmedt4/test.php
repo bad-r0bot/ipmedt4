@@ -1,7 +1,7 @@
   <?php
 $link = mysqli_connect('localhost', 'root', '', 'movedb');
 
-    $query = "SELECT Ville FROM city_type";
+    $query = "SELECT Ville_ID, Ville FROM city_type";
 
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
@@ -13,7 +13,7 @@ $link = mysqli_connect('localhost', 'root', '', 'movedb');
 		{
 			$rows[] = $r;
 		}
-		
+	
 	//display the array in php
 	//var_dump($rows);
 	//echo '<br>';
