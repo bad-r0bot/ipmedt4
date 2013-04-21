@@ -1,7 +1,7 @@
   <?php
 $link = mysqli_connect('localhost', 'root', '', 'movedb');
 
-    $query = "SELECT * FROM city_type";
+    $query = "SELECT Ville FROM city_type";
 
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
@@ -13,7 +13,22 @@ $link = mysqli_connect('localhost', 'root', '', 'movedb');
 		{
 			$rows[] = $r;
 		}
+		
+	//display the array in php
+	//var_dump($rows);
+	//echo '<br>';
+
+	//json encode it
+	//$json = json_encode($rows);
+	//var_dump($json);
+	//echo '<br>';
+
+	//json encode just the values
+	//$json = json_encode(array_values($rows));
+	//var_dump($json);
+	
+	//print json_encode($json);
 	
 	print json_encode($rows);
-    //
+    //echo '<br>';
 ?>
