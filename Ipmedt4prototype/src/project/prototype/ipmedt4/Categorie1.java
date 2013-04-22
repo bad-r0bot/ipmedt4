@@ -14,6 +14,12 @@ public class Categorie1 extends Activity
 	Button settings;
 	Button search;
 	Button terug;
+	Button item1;
+	Button item2;
+	Button item3;
+	Button item4;
+	Button item5;
+	Button item6;
 	//laadt de XML in
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,6 +67,78 @@ public class Categorie1 extends Activity
 
 	//maak een listener die buttons de mogelijkheid geeft om ingedrukt te worden
 	public void addListenerOnButton() {
+		
+		item1 = (Button) findViewById(R.id.item1);
+
+		item1.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		item2 = (Button) findViewById(R.id.item2);
+
+		item2.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		item3 = (Button) findViewById(R.id.item3);
+
+		item3.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		item4 = (Button) findViewById(R.id.item4);
+
+		item4.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		item5 = (Button) findViewById(R.id.item5);
+
+		item5.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		item6 = (Button) findViewById(R.id.item6);
+
+		item6.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
 		
 		settings = (Button) findViewById(R.id.settings);
 

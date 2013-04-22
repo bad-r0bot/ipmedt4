@@ -145,7 +145,7 @@
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/categorie5"
+                        android:id="@+id/categorie6"
                         android:layout_width="fill_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/sociaal"

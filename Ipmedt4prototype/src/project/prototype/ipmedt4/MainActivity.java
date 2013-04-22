@@ -14,6 +14,11 @@ public class MainActivity extends Activity
 	Button settings;
 	Button search;
 	Button categorie1;
+	Button categorie2;
+	Button categorie3;
+	Button categorie4;
+	Button categorie5;
+	Button categorie6;
 	//laadt de XML in
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -90,6 +95,66 @@ public class MainActivity extends Activity
 			public void onClick(View view) {
 
 				Intent myIntent = new Intent(view.getContext(), Categorie1.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		categorie2 = (Button) findViewById(R.id.categorie2);
+
+		categorie2.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		categorie3 = (Button) findViewById(R.id.categorie3);
+
+		categorie3.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		categorie4 = (Button) findViewById(R.id.categorie4);
+
+		categorie4.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		categorie5 = (Button) findViewById(R.id.categorie5);
+
+		categorie5.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
+
+		categorie6 = (Button) findViewById(R.id.categorie6);
+
+		categorie6.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});

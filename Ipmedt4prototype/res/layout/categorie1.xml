@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" 
-        	xmlns:android="http://schemas.android.com/apk/res/android">
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="88"
-            android:background="@drawable/top" >
+        android:layout_weight="88"
+        android:background="@drawable/top" >
 
         <Button
             android:id="@+id/settings"
@@ -42,109 +41,134 @@
             android:layout_weight="5"
             android:background="@drawable/search"
             android:gravity="bottom|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="96"
+            android:background="@drawable/side1" >
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="20" >
+            android:layout_weight="2" >
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="96"
-                android:background="@drawable/side1" >
-            </LinearLayout>
+                android:layout_height="fill_parent" >
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="2" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
 
-<ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+                    <Button
+                        android:id="@+id/item1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item1"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Dolmen de Sainte-Anne"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-<LinearLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+                    <Button
+                        android:id="@+id/item2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item2"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Dolmens de Kerfuns"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-    android:orientation="vertical"
+                    <Button
+                        android:id="@+id/item3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item3"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Menhir de Lanveur"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-    >
+                    <Button
+                        android:id="@+id/item4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item4"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Pont roman"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/item1"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/notfound"
-        android:gravity="bottom|center_horizontal"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
-        android:text="Item 1"
-        android:textColor="#FF0040"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/item5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item5"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Stèle de Trémeur"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/item2"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/notfound"
-        android:gravity="bottom|center_horizontal"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
-        android:text="Item 2"
-        android:textColor="#FF0040"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-    
-    <Button
-        android:id="@+id/item3"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/notfound"
-        android:gravity="bottom|center_horizontal"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
-        android:text="Item 3"
-        android:textColor="#FF0040"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-    
-        <Button
-        android:id="@+id/item4"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/notfound"
-        android:gravity="bottom|center_horizontal"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
-        android:text="Item 4"
-        android:textColor="#FF0040"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-
-</LinearLayout>
-    </ScrollView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="96"
-                android:background="@drawable/side2" >
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/item6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item6"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Tombeau du Serpent"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="96"
+            android:background="@drawable/side2" >
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -172,8 +196,6 @@
             android:gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
             android:visibility="visible" />
-
-
-        </LinearLayout>
-
     </LinearLayout>
+
+</LinearLayout>

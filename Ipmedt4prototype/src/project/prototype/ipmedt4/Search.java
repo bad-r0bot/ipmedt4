@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 public class Search extends Activity
 {	
 	Button terug;
+	Button search;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -51,6 +52,18 @@ public class Search extends Activity
 		startActivityForResult(myIntent, 0);
 	}
 	public void addListenerOnButton() {
+		
+		search = (Button) findViewById(R.id.search);
+
+		search.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+		});
 
 		terug = (Button) findViewById(R.id.terug);
 
