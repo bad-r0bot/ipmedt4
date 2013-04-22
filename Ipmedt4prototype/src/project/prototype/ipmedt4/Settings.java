@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.TextView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,8 @@ import android.view.View.OnClickListener;
 public class Settings extends Activity
 {	
 	Button terug;
+	Button button1;
+	Button button2;
 	//laden van XML
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -52,6 +55,32 @@ public class Settings extends Activity
 	}
 
 	public void addListenerOnButton() {
+		
+		button1 = (Button) findViewById(R.id.button1);
+
+		button1.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				final TextView textViewToChange = (TextView) findViewById(R.id.optie);
+				textViewToChange.setText(
+				    "1");
+				
+			}
+		});
+		
+		button2 = (Button) findViewById(R.id.button2);
+
+		button2.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				final TextView textViewToChange = (TextView) findViewById(R.id.optie);
+				textViewToChange.setText(
+				    "2");
+				
+			}
+		});
 
 		terug = (Button) findViewById(R.id.terug);
 

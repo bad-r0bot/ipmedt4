@@ -80,13 +80,22 @@
                         android:id="@+id/button1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="Optie 1" />
+                        android:text="1" />
 
                     <Button
                         android:id="@+id/button2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="Optie 2" />
+                        android:text="2" />
+
+                    <TextView
+                        android:id="@+id/optie"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/optie"
+                        android:textSize="30sp" />
+                    
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -125,7 +134,6 @@
             android:gravity="center_vertical|center_horizontal"
             android:textSize="20sp"
             android:visibility="visible" />
-
     </LinearLayout>
 
 </LinearLayout>
