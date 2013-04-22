@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,15 +28,11 @@ import android.widget.Toast;
 
 /**
  * 
- * @author Jim Schoorl
+ * @author Jim Schoorl, Frans van Nijnanten
  *
  */
 public class AsyncTaskPull extends Activity {
 
-	private static final String TAG_SUCCESS = "success";
-	private static final String TAG_PRODUCTS = "products";
-	private static final String TAG_PID = "pid";
-	private static final String TAG_NAME = "name";
 	
 	ArrayList<JSONObject> arrayValue = new ArrayList<JSONObject>();
 	TextView txt;
@@ -158,7 +153,7 @@ public class AsyncTaskPull extends Activity {
 				//Final
 				
 				
-				//String jsonString = returnString;
+				String jsonString = returnString;
 
 				
 			}
@@ -179,13 +174,24 @@ public class AsyncTaskPull extends Activity {
 			Toast.makeText(AsyncTaskPull.this,
 					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 	
-			//txt.setText(result); 
+			
+			if (result.contains(",")) {
+				String[] parts = result.split(",");
+				String part1 = parts[0];
+				String part2 = parts[1];
+				
+				txt.setText("" + part1 + "\n" + part2); 
+			} else {
+			    throw new IllegalArgumentException("String " + result + " does not contain -");
+			}
+			
+			//txt.setText("" + part1 + "\n" + part2); 
 			
 			//for(int i=0;i<( arrayValue).length();i++) 
 			//{
-			
-				txt.setText("" + arrayValue + "\n");
-
+				
+				//txt.setText("" + returnString + "\n");
+				//System.out.println("" + arrayValue);
 			//}
 			//txt2.setText(txt2.getText().toString() + "\n" + arrayValue);
 			
