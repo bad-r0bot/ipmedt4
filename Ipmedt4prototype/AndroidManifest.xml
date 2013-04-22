@@ -38,7 +38,7 @@
               android:screenOrientation="portrait">
             
         </activity>
-                                <activity 
+        <activity 
             android:name="project.prototype.ipmedt4.Categorie1"
               android:screenOrientation="portrait">
             
@@ -48,7 +48,7 @@
               android:screenOrientation="portrait">
             
         </activity>
-                <activity 
+        <activity 
             android:name="project.prototype.ipmedt4.AsyncTaskPull"
               android:screenOrientation="portrait">
         </activity>
