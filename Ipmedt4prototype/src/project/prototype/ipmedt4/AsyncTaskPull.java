@@ -40,9 +40,9 @@ public class AsyncTaskPull extends Activity {
 	Button btn_start;
 	ProgressBar progressBar;
 	TextView txt_percentage;
-	String[] attID;
-	String[] attDesc;
-	String[] attNaam;
+	String[] attID = null;
+	String[] attDesc = null;
+	String[] attNaam = null;
 	
 	// Creating JSON Parser object
 	JSONParser jParser = new JSONParser();
@@ -138,6 +138,11 @@ public class AsyncTaskPull extends Activity {
 			
 			try{
 				JSONArray jArray = new JSONArray(result);
+				
+				attID = new String[jArray.length()];
+				attNaam = new String[jArray.length()];
+				attDesc = new String[jArray.length()];
+				
 				// Loop om alles in de collumns te vinden.
 				for(int i=0;i<jArray.length();i++)
 				{
@@ -156,9 +161,9 @@ public class AsyncTaskPull extends Activity {
 					
 					
 				
-					txt.append(attID[0]);
-					txt.append(attNaam[0]);
-					txt.append(attDesc[0]);
+					
+					//txt2.setText(attNaam[1]);
+					//txt.append(attDesc[1]);
 				}
 				
 				//Final
@@ -184,7 +189,9 @@ public class AsyncTaskPull extends Activity {
 	
 			//txt.setText(result); 
 			
-
+			txt.setText(attNaam[0]);
+			txt2.setText(attDesc[0]);
+			
 			btn_start.setEnabled(true);
 		}
 	}
