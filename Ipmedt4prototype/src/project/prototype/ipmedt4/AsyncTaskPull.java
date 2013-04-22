@@ -40,6 +40,9 @@ public class AsyncTaskPull extends Activity {
 	Button btn_start;
 	ProgressBar progressBar;
 	TextView txt_percentage;
+	String[] attID;
+	String[] attDesc;
+	String[] attNaam;
 	
 	// Creating JSON Parser object
 	JSONParser jParser = new JSONParser();
@@ -140,10 +143,22 @@ public class AsyncTaskPull extends Activity {
 				{
 					JSONObject json_data = jArray.getJSONObject(i);
 					
-					Log.i("log_tag"," Attraction_name_Dutch: "+json_data.getString("Attraction_name_Dutch")  );
+					// Dit werkt niet. Null pointer exception hier.
+					attID[i] = jArray.getJSONObject(i).getString("Attraction_ID");
+					attNaam[i] = jArray.getJSONObject(i).getString("Attraction_name_Dutch");
+					attDesc[i] = jArray.getJSONObject(i).getString("Attraction_description_Dutch");
+					
+					//Log.i("log_tag"," Attraction_name_Dutch: "+json_data.getString("Attraction_name_Dutch"));
+					
 					
 					//Get an output to the screen
-					returnString += "\n\t" + jArray.getJSONObject(i); 
+					//returnString += "\n\t" + jArray.getJSONObject(i); 
+					
+					
+				
+					txt.append(attID[0]);
+					txt.append(attNaam[0]);
+					txt.append(attDesc[0]);
 				}
 				
 				//Final
@@ -167,7 +182,7 @@ public class AsyncTaskPull extends Activity {
 			Toast.makeText(AsyncTaskPull.this,
 					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 	
-			txt.setText(result); 
+			//txt.setText(result); 
 			
 
 			btn_start.setEnabled(true);
