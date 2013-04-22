@@ -141,13 +141,13 @@ public class AsyncTaskPull extends Activity {
 				{
 					JSONObject json_data = jArray.getJSONObject(i);
 					arrayValue.add(json_data);
-					Log.i("log_tag"," Ville: "+json_data.getString(""));
+					Log.i("log_tag"," "+json_data.getString(""));
 					
 					//Get an output to the screen
 					returnString += "" + jArray.getJSONObject(i); 
 					
-					JSONObject[] jsons = new JSONObject[arrayValue.size()];
-					arrayValue.toArray(jsons);
+					//JSONObject[] jsons = new JSONObject[arrayValue.size()];
+					//arrayValue.toArray(jsons);
 					
 				}
 				//Final
@@ -174,7 +174,8 @@ public class AsyncTaskPull extends Activity {
 			Toast.makeText(AsyncTaskPull.this,
 					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 	
-			
+			txt.setText(result); 
+			/*
 			if (result.contains(",")) {
 				String[] parts = result.split(",");
 				String part1 = parts[0];
@@ -194,7 +195,7 @@ public class AsyncTaskPull extends Activity {
 				//System.out.println("" + arrayValue);
 			//}
 			//txt2.setText(txt2.getText().toString() + "\n" + arrayValue);
-			
+			*/
 
 			btn_start.setEnabled(true);
 		}
