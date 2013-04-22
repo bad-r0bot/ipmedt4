@@ -14,30 +14,5 @@ $link = mysqli_connect('localhost', 'root', '', 'movedb');
 		$rows[] = array_map('utf8_encode', $r);
 	}
 	
-	// function cb($string) 
-	// {
-		// return iconv("iso-8859-1", "utf-8", $string);
-	// }
-
-	// $r = array_map('cb', $r);
-
-	// $rows[] = $r;
-	
-	//display the array in php
-	//var_dump($rows);
-	//echo '<br>';
-
-	//json encode it
-	//$json = json_encode($rows);
-	//var_dump($json);
-	//echo '<br>';
-
-	//json encode just the values
-	//$json = json_encode(array_values($rows));
-	//var_dump($json);
-	
-	//print json_encode($json);
-	
 	print json_encode($rows);
-    //echo '<br>';
-?>
+ ?>

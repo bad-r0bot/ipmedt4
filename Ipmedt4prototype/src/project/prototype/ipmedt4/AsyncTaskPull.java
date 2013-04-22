@@ -68,7 +68,6 @@ public class AsyncTaskPull extends Activity {
 		});
 	}
 
-
 	private class ShowDialogAsyncTask extends AsyncTask<Void, Void, String>
 	{
 
@@ -146,48 +145,28 @@ public class AsyncTaskPull extends Activity {
 				// Loop om alles in de collumns te vinden.
 				for(int i=0;i<jArray.length();i++)
 				{
-					JSONObject json_data = jArray.getJSONObject(i);
+					//JSONObject json_data = jArray.getJSONObject(i);
 					
-					// Dit werkt niet. Null pointer exception hier.
 					attID[i] = jArray.getJSONObject(i).getString("Attraction_ID");
 					attNaam[i] = jArray.getJSONObject(i).getString("Attraction_name_Dutch");
 					attDesc[i] = jArray.getJSONObject(i).getString("Attraction_description_Dutch");
 					
-					//Log.i("log_tag"," Attraction_name_Dutch: "+json_data.getString("Attraction_name_Dutch"));
-					
-					
-					//Get an output to the screen
-					//returnString += "\n\t" + jArray.getJSONObject(i); 
-					
-					
-				
-					
-					//txt2.setText(attNaam[1]);
-					//txt.append(attDesc[1]);
 				}
-				
-				//Final
-				String jsonString2 = returnString;
-				
 			}
 			
 			catch(JSONException e)
 			{
 				Log.e("log_tag", "Error parsing data "+e.toString());
 			}
+			
 			return returnString; 
-
 		}  
-
 	
 		@Override
 		protected void onPostExecute(String result) {
 			super.onPostExecute(result);
 	
-			Toast.makeText(AsyncTaskPull.this,
-					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
-	
-			//txt.setText(result); 
+			Toast.makeText(AsyncTaskPull.this,"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 			
 			txt.setText(attNaam[0]);
 			txt2.setText(attDesc[0]);
