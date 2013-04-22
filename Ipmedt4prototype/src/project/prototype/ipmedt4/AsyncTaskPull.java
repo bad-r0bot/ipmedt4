@@ -135,26 +135,19 @@ public class AsyncTaskPull extends Activity {
 			
 			try{
 				JSONArray jArray = new JSONArray(result);
-				
 				// Loop om alles in de collumns te vinden.
 				for(int i=0;i<jArray.length();i++)
 				{
 					JSONObject json_data = jArray.getJSONObject(i);
-					arrayValue.add(json_data);
-					Log.i("log_tag"," "+json_data.getString(""));
+					
+					Log.i("log_tag"," Ville_ID: "+json_data.getString("Ville_ID")  );
 					
 					//Get an output to the screen
-					returnString += "" + jArray.getJSONObject(i); 
-					
-					//JSONObject[] jsons = new JSONObject[arrayValue.size()];
-					//arrayValue.toArray(jsons);
-					
+					returnString += "\n\t" + jArray.getJSONObject(i); 
 				}
+				
 				//Final
-				
-				
-				String jsonString = returnString;
-
+				String jsonString2 = returnString;
 				
 			}
 			
@@ -175,27 +168,7 @@ public class AsyncTaskPull extends Activity {
 					"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 	
 			txt.setText(result); 
-			/*
-			if (result.contains(",")) {
-				String[] parts = result.split(",");
-				String part1 = parts[0];
-				String part2 = parts[1];
-				
-				txt.setText("" + part1 + "\n" + part2); 
-			} else {
-			    throw new IllegalArgumentException("String " + result + " does not contain -");
-			}
 			
-			//txt.setText("" + part1 + "\n" + part2); 
-			
-			//for(int i=0;i<( arrayValue).length();i++) 
-			//{
-				
-				//txt.setText("" + returnString + "\n");
-				//System.out.println("" + arrayValue);
-			//}
-			//txt2.setText(txt2.getText().toString() + "\n" + arrayValue);
-			*/
 
 			btn_start.setEnabled(true);
 		}
