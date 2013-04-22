@@ -140,7 +140,7 @@ public class AsyncTaskPull extends Activity {
 				{
 					JSONObject json_data = jArray.getJSONObject(i);
 					
-					Log.i("log_tag"," Ville_ID: "+json_data.getString("Ville_ID")  );
+					Log.i("log_tag"," Attraction_name_Dutch: "+json_data.getString("Attraction_name_Dutch")  );
 					
 					//Get an output to the screen
 					returnString += "\n\t" + jArray.getJSONObject(i); 
