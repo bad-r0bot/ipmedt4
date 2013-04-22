@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.MenuItem;
@@ -12,9 +13,12 @@ import android.view.View.OnClickListener;
 
 public class Settings extends Activity
 {	
+  
 	Button terug;
 	Button button1;
 	Button button2;
+	TextView optie1;
+
 	//laden van XML
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -23,7 +27,11 @@ public class Settings extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.settings);
 
+		optie1 = (TextView)findViewById(R.id.optie);
+		
 		addListenerOnButton();
+		
+	      LoadPreferences();
 
 	}
 
@@ -55,30 +63,30 @@ public class Settings extends Activity
 	}
 
 	public void addListenerOnButton() {
-		
+
 		button1 = (Button) findViewById(R.id.button1);
 
 		button1.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				final TextView textViewToChange = (TextView) findViewById(R.id.optie);
-				textViewToChange.setText(
-				    "1");
+			  @Override
+			  public void onClick(View arg0) {
+			   // TODO Auto-generated method stub
+			   SavePreferences("MEM1", "Fiets");
+			   LoadPreferences();
 				
 			}
 		});
-		
+
 		button2 = (Button) findViewById(R.id.button2);
 
 		button2.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				final TextView textViewToChange = (TextView) findViewById(R.id.optie);
-				textViewToChange.setText(
-				    "2");
-				
+			  @Override
+			  public void onClick(View arg0) {
+			   // TODO Auto-generated method stub
+			   SavePreferences("MEM1", "Auto");
+			   LoadPreferences();
+
 			}
 		});
 
@@ -94,7 +102,19 @@ public class Settings extends Activity
 			}
 
 		});
-
+		
 	}
+	   private void SavePreferences(String key, String value){
+		    SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+		    SharedPreferences.Editor editor = sharedPreferences.edit();
+		    editor.putString(key, value);
+		    editor.commit();
+		   }
+		  
+		   private void LoadPreferences(){
+		    SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+		    String strSavedMem1 = sharedPreferences.getString("MEM1", "");
+		    optie1.setText(strSavedMem1);
+		   }
 
 }
