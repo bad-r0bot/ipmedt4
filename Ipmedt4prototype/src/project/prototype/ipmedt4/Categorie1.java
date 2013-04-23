@@ -75,7 +75,7 @@ public class Categorie1 extends Activity
 			@Override
 			public void onClick(View view) {
 
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});

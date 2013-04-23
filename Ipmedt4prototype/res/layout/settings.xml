@@ -77,49 +77,70 @@
                     android:orientation="vertical" >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
 
-                        <TextView
-                            android:id="@+id/Vervoer"
+                        <LinearLayout
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/Vervoer"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="Vervoermiddel"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/optie"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="@string/optie"
+                                android:textColor="#000000"
+                                android:textSize="30sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:gravity="center_vertical|center_horizontal"
-                            android:text="Vervoermiddel"
-                            android:textSize="30sp" />
+                            android:orientation="horizontal" >
 
-                        <TextView
-                            android:id="@+id/optie"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:gravity="center_vertical|center_horizontal"
-                            android:text="@string/optie"
-                            android:textColor="#000000"
-                            android:textSize="30sp" />
+                            <Button
+                                android:id="@+id/button1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Fiets" />
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Auto" />
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="90"
-                        android:orientation="horizontal" >
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
 
-                        <Button
-                            android:id="@+id/button1"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Fiets" />
+                    </LinearLayout>
 
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Auto" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
 
                     </LinearLayout>
 
