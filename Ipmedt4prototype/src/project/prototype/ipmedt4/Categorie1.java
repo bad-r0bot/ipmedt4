@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class Categorie1 extends Activity
+public class Categorie1 extends Activity //Error hier
 {	
 	Button settings;
 	Button search;
@@ -20,8 +20,10 @@ public class Categorie1 extends Activity
 	Button item4;
 	Button item5;
 	Button item6;
-
-	AsyncTaskPull catItem = new AsyncTaskPull();
+	
+	int itemCategorie = 0;
+	
+	AsyncTaskPull asyncTask = new AsyncTaskPull();
 
 	//laadt de XML in
 	@Override
@@ -77,11 +79,11 @@ public class Categorie1 extends Activity
 
 			@Override
 			public void onClick(View view) {
-				catItem.setItem(0);
+				asyncTask.setItemVIAcategorie(0);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
-				System.out.println("item 1: ik setItem op 0");
+				System.out.println("Categorie - item 1: ik setItem op 0");
 			}
 
 
@@ -94,11 +96,11 @@ public class Categorie1 extends Activity
 
 			@Override
 			public void onClick(View view) {
-				catItem.setItem(1);
+				asyncTask.setItemVIAcategorie(1);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
-				System.out.println("item 2: ik setItem op 1");
+				System.out.println("2- Categorie - item 2: ik setItem op 1");
 			}
 			
 		});
@@ -109,7 +111,7 @@ public class Categorie1 extends Activity
 
 			@Override
 			public void onClick(View view) {
-
+				asyncTask.setItemVIAcategorie(2);
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
@@ -128,9 +130,7 @@ public class Categorie1 extends Activity
 		});
 
 		item5 = (Button) findViewById(R.id.item5);
-
 		item5.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View view) {
 
@@ -140,9 +140,7 @@ public class Categorie1 extends Activity
 		});
 
 		item6 = (Button) findViewById(R.id.item6);
-
 		item6.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View view) {
 
@@ -152,7 +150,6 @@ public class Categorie1 extends Activity
 		});
 
 		settings = (Button) findViewById(R.id.settings);
-
 		settings.setOnClickListener(new OnClickListener() {
 			//koppel de button aan een nieuw xml scherm wat opent
 			@Override
@@ -165,7 +162,6 @@ public class Categorie1 extends Activity
 		});
 
 		search = (Button) findViewById(R.id.search);
-
 		search.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -177,16 +173,15 @@ public class Categorie1 extends Activity
 		});
 
 		terug = (Button) findViewById(R.id.terug);
-
-		terug.setOnClickListener(new OnClickListener() {
-
+		terug.setOnClickListener(new OnClickListener() 
+		{
 			@Override
 			public void onClick(View view) {
 				Intent intent = new Intent();
 				setResult(RESULT_OK, intent);
 				finish();
 			}
-
 		});
 	}
+	
 }

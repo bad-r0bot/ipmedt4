@@ -45,17 +45,14 @@ public class AsyncTaskPull extends Activity {
 	Button search;
 	Button terug;
 
-	 int itemX;
-
-
-	//int item = catItem.item;
+	 int asyncItemNummer;
 
 	JSONParser jParser = new JSONParser();
 	//laadt de XML in
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		System.out.println("wat is Item bij OnCreate: " + itemX);
+		System.out.println("3- Async: wat is Item nummer bij OnCreate? " + asyncItemNummer);
 		//koppel de xml aan de java
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_async_task);
@@ -72,8 +69,9 @@ public class AsyncTaskPull extends Activity {
 
 		settings = (Button) findViewById(R.id.settings);
 		
-		this.itemX = getItem();
-		System.out.println("wat is Item bij this.itemX= getItem(): " + itemX);
+		asyncItemNummer = getItem();
+		
+		System.out.println("5- Async: wat is Item bij OnCreate (na get call): " + asyncItemNummer);
 		
 		btn_start.setOnClickListener(new View.OnClickListener() {
 
@@ -182,6 +180,7 @@ public class AsyncTaskPull extends Activity {
 			String returnString = null;
 
 			try{
+				System.out.println("5- Async: wat is Item nummer bij doInBackground? " + asyncItemNummer);
 				JSONArray jArray = new JSONArray(result);
 
 				attID = new String[jArray.length()];
@@ -215,13 +214,9 @@ public class AsyncTaskPull extends Activity {
 			Toast.makeText(AsyncTaskPull.this,"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 
 
-			System.out.println("Async: Ik pak de text: " + itemX);
+			System.out.println("6- Async: Ik pak de text (onpostexecute): " + asyncItemNummer);
 			txt.setText(attNaam[getItem()]);
 			txt2.setText(attDesc[getItem()]);
-
-
-
-
 
 			btn_start.setEnabled(true);
 		}
@@ -269,14 +264,17 @@ public class AsyncTaskPull extends Activity {
 
 		
 	}
-public int getItem() {
-	System.out.println("Async: getItem: " + itemX);
-	return this.itemX;
-}
-
-public void setItem(int itemX) {
-	System.out.println("Async: setItem: " + itemX);
-	this.itemX = itemX;
-}
+	
+	public int getItem() {
+		System.out.println("4- Async: getItem: " + asyncItemNummer);
+		return asyncItemNummer;
+	}
+	
+	
+	public void setItemVIAcategorie(int nummerItem)
+	{
+		System.out.println("?- Async: setItemVIAcategorie: " + asyncItemNummer);
+		asyncItemNummer = nummerItem;
+	}
 }
 
