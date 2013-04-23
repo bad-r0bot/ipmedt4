@@ -45,7 +45,7 @@ public class AsyncTaskPull extends Activity {
 	Button search;
 	Button terug;
 
-	public int itemX;
+	 int itemX;
 
 
 	//int item = catItem.item;
@@ -55,7 +55,7 @@ public class AsyncTaskPull extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		System.out.println("wat is Item: " + itemX);
+		System.out.println("wat is Item bij OnCreate: " + itemX);
 		//koppel de xml aan de java
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_async_task);
@@ -71,6 +71,9 @@ public class AsyncTaskPull extends Activity {
 		search = (Button) findViewById(R.id.search);
 
 		settings = (Button) findViewById(R.id.settings);
+		
+		this.itemX = getItem();
+		System.out.println("wat is Item bij this.itemX= getItem(): " + itemX);
 		
 		btn_start.setOnClickListener(new View.OnClickListener() {
 
@@ -212,9 +215,9 @@ public class AsyncTaskPull extends Activity {
 			Toast.makeText(AsyncTaskPull.this,"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
 
 
-			System.out.println("Item text: " + itemX);
-			txt.setText(attNaam[itemX]);
-			txt2.setText(attDesc[itemX]);
+			System.out.println("Async: Ik pak de text: " + itemX);
+			txt.setText(attNaam[getItem()]);
+			txt2.setText(attDesc[getItem()]);
 
 
 
@@ -267,12 +270,13 @@ public class AsyncTaskPull extends Activity {
 		
 	}
 public int getItem() {
-	System.out.println("getItem: " + itemX);
+	System.out.println("Async: getItem: " + itemX);
 	return this.itemX;
 }
-public void setItem(int nummer) {
-	System.out.println("setItem: " + itemX);
-	this.itemX = nummer;
+
+public void setItem(int itemX) {
+	System.out.println("Async: setItem: " + itemX);
+	this.itemX = itemX;
 }
 }
 

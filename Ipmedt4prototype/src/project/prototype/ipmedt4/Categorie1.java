@@ -21,8 +21,6 @@ public class Categorie1 extends Activity
 	Button item5;
 	Button item6;
 
-	public int item;
-
 	AsyncTaskPull catItem = new AsyncTaskPull();
 
 	//laadt de XML in
@@ -83,7 +81,7 @@ public class Categorie1 extends Activity
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
-				System.out.println("item 0 verzonden: " + item);
+				System.out.println("item 1: ik setItem op 0");
 			}
 
 
@@ -100,8 +98,9 @@ public class Categorie1 extends Activity
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
-				System.out.println("item 1 verzonden: " + item);
+				System.out.println("item 2: ik setItem op 1");
 			}
+			
 		});
 
 		item3 = (Button) findViewById(R.id.item3);
