@@ -20,64 +20,74 @@ public class Categorie1 extends Activity
 	Button item4;
 	Button item5;
 	Button item6;
+
+	public int item;
+
+	AsyncTaskPull catItem = new AsyncTaskPull();
+
 	//laadt de XML in
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-    	//koppel de xml aan de java
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.categorie1);
-        
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		//koppel de xml aan de java
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.categorie1);
+
 		addListenerOnButton();
 
-        //laad het listview object
-		
-    }
+		//laad het listview object
 
-    
-    //maak een menubalk
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-    	
-        //vul de menubalk in
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // verwijs de info knop door naar het info scherm.
-        switch (item.getItemId()) {
-        case R.id.info:
-            openContact(settings);
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
-    
+	}
+
+
+	//maak een menubalk
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+
+		//vul de menubalk in
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// verwijs de info knop door naar het info scherm.
+		switch (item.getItemId()) {
+		case R.id.info:
+			openContact(settings);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
 
 	private void openContact(View view) {
 
-               Intent myIntent = new Intent(view.getContext(), Info.class);
-               startActivityForResult(myIntent, 0);
-           }
-
+		Intent myIntent = new Intent(view.getContext(), Info.class);
+		startActivityForResult(myIntent, 0);
+	}
 
 	//maak een listener die buttons de mogelijkheid geeft om ingedrukt te worden
 	public void addListenerOnButton() {
-		
+
+
 		item1 = (Button) findViewById(R.id.item1);
 
 		item1.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-
+				catItem.setItem(0);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
+
+				System.out.println("item 0 verzonden: " + item);
 			}
+
+
+
 		});
 
 		item2 = (Button) findViewById(R.id.item2);
@@ -86,9 +96,11 @@ public class Categorie1 extends Activity
 
 			@Override
 			public void onClick(View view) {
-
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				catItem.setItem(1);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
+
+				System.out.println("item 1 verzonden: " + item);
 			}
 		});
 
@@ -139,7 +151,7 @@ public class Categorie1 extends Activity
 				startActivityForResult(myIntent, 0);
 			}
 		});
-		
+
 		settings = (Button) findViewById(R.id.settings);
 
 		settings.setOnClickListener(new OnClickListener() {
@@ -164,20 +176,18 @@ public class Categorie1 extends Activity
 				startActivityForResult(myIntent, 0);
 			}
 		});
-	
+
 		terug = (Button) findViewById(R.id.terug);
 
 		terug.setOnClickListener(new OnClickListener() {
 
 			@Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                setResult(RESULT_OK, intent);
-                finish();
-            }
- 
+			public void onClick(View view) {
+				Intent intent = new Intent();
+				setResult(RESULT_OK, intent);
+				finish();
+			}
+
 		});
 	}
-	
-    
 }
