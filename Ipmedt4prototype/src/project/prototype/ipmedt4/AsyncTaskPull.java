@@ -29,6 +29,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author RobotKoala
+ *
+ */
 public class AsyncTaskPull extends Activity {
 
 
@@ -133,6 +137,9 @@ public class AsyncTaskPull extends Activity {
 
 		}
 
+		/* (non-Javadoc)
+		 * @see android.os.AsyncTask#doInBackground(Params[])
+		 */
 		@Override
 		protected String doInBackground(Void... params) {
 
@@ -184,18 +191,16 @@ public class AsyncTaskPull extends Activity {
 			String returnString = null;
 
 			try{
-				System.out.println("5- Async: wat is Item nummer bij doInBackground? " + asyncItemNummer);
 				JSONArray jArray = new JSONArray(result);
 
 				attID = new String[jArray.length()];
 				attNaam = new String[jArray.length()];
 				attDesc = new String[jArray.length()];
 
-				// Loop om alles in de collumns te vinden.
+				//For loop loopt alle kollommen af en zet ze in een array.
 				for(int i=0;i<jArray.length();i++)
 				{
-					//JSONObject json_data = jArray.getJSONObject(i);
-
+					//Hier wordt de JSon data in een array gezet. Deze worden later geladen.
 					attID[i] = jArray.getJSONObject(i).getString("Attraction_ID");
 					attNaam[i] = jArray.getJSONObject(i).getString("Attraction_name_Dutch");
 					attDesc[i] = jArray.getJSONObject(i).getString("Attraction_description_Dutch");
@@ -219,6 +224,9 @@ public class AsyncTaskPull extends Activity {
 
 
 			System.out.println("6- Async: Ik pak de text (onpostexecute): " + asyncItemNummer);
+			
+			//De nummer van de item/knop uit Categorie wordt uit ItemHandle.java gehaald om geset te worden volgens
+			// wat gedefinieerd is via de PHP in de array.
 			txt.setText(attNaam[nummerHandlerAsync.getDBitem()]);
 			txt2.setText(attDesc[nummerHandlerAsync.getDBitem()]);
 

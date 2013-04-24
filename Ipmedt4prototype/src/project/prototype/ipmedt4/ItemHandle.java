@@ -1,7 +1,7 @@
 package project.prototype.ipmedt4;
 
 
-// Deze Class behoudt de nummer van de knop/item die je indrukt.
+// Deze Class behoudt de nummer van de knop/item die je indrukt in Categorie..
 public final class ItemHandle {
 
 	private static int dbItem;
@@ -17,7 +17,6 @@ public final class ItemHandle {
 		
 		ItemHandle.dbItem = nummer;
 		System.out.println("666- set item nummer: " + dbItem);
-
 	}
 	
 	public int getDBitem()
