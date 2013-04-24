@@ -73,6 +73,36 @@
                         android:id="@+id/item1"
                         android:layout_width="fill_parent"
                         android:layout_height="200dp"
+                        android:background="@drawable/cat1item4"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Pont Roman"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/item2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/cat1item5"
+                        android:gravity="bottom|center_horizontal"
+                        android:shadowColor="#000000"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="6"
+                        android:text="Stèle deTrémeur"
+                        android:textColor="#FF0040"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/item3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
                         android:background="@drawable/cat1item1"
                         android:gravity="bottom|center_horizontal"
                         android:shadowColor="#000000"
@@ -85,22 +115,7 @@
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/item2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:background="@drawable/cat1item2"
-                        android:gravity="bottom|center_horizontal"
-                        android:shadowColor="#000000"
-                        android:shadowDx="3"
-                        android:shadowDy="3"
-                        android:shadowRadius="6"
-                        android:text="Dolmens de Kerfuns"
-                        android:textColor="#FF0040"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/item3"
+                        android:id="@+id/item4"
                         android:layout_width="fill_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/cat1item3"
@@ -115,31 +130,16 @@
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/item4"
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:background="@drawable/cat1item4"
-                        android:gravity="bottom|center_horizontal"
-                        android:shadowColor="#000000"
-                        android:shadowDx="3"
-                        android:shadowDy="3"
-                        android:shadowRadius="6"
-                        android:text="Pont roman"
-                        android:textColor="#FF0040"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
-
-                    <Button
                         android:id="@+id/item5"
                         android:layout_width="fill_parent"
                         android:layout_height="200dp"
-                        android:background="@drawable/cat1item5"
+                        android:background="@drawable/cat1item2"
                         android:gravity="bottom|center_horizontal"
                         android:shadowColor="#000000"
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Stèle de Trémeur"
+                        android:text="Dolmens de Kerfuens"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -154,7 +154,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Tombeau du Serpent"
+                        android:text="Tombeau de Francois II de Bretagne"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />

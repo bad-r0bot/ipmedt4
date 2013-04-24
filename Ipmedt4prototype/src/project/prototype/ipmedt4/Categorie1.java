@@ -119,8 +119,6 @@ public class Categorie1 extends Activity
 				nummerHandlerCategorie.setDBitem(0);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
-
-				System.out.println("Categorie - item 1: ik setItem op 0");
 			}
 		});
 
@@ -133,8 +131,6 @@ public class Categorie1 extends Activity
 				nummerHandlerCategorie.setDBitem(1);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
-
-				System.out.println("2- Categorie - item 2: ik setItem op 1");
 			}
 			
 		});
@@ -143,8 +139,10 @@ public class Categorie1 extends Activity
 		item3.setOnClickListener(new OnClickListener() 
 		{
 			@Override
-			public void onClick(View view) {
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+			public void onClick(View view)
+			{
+				nummerHandlerCategorie.setDBitem(2);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});
@@ -155,7 +153,8 @@ public class Categorie1 extends Activity
 			@Override
 			public void onClick(View view) 
 			{
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				nummerHandlerCategorie.setDBitem(3);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});
@@ -165,7 +164,8 @@ public class Categorie1 extends Activity
 			@Override
 			public void onClick(View view) 
 			{
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				nummerHandlerCategorie.setDBitem(4);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});
@@ -175,7 +175,8 @@ public class Categorie1 extends Activity
 			@Override
 			public void onClick(View view) 
 			{
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				nummerHandlerCategorie.setDBitem(5);
+				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});

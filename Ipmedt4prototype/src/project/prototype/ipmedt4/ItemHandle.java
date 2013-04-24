@@ -5,7 +5,7 @@ package project.prototype.ipmedt4;
  * Deze Class behoudt de nummer van de knop/item die je indrukt in Categorie.
  * Het nummer wordt vervolgens in AsyncTaskPull.java opgeroepen via de getDBitem methode.
  * 
- * @author Jim Schoorl, Frans van Nijnanten
+ * @author Jim Schoorl
  */
 public final class ItemHandle {
 
