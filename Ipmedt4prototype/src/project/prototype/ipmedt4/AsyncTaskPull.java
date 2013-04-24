@@ -35,7 +35,6 @@ public class AsyncTaskPull extends Activity {
 	ArrayList<JSONObject> arrayValue = new ArrayList<JSONObject>();
 	TextView txt;
 	TextView txt2;
-	Button btn_start;
 	TextView txt_percentage;
 	String[] attID = null;
 	String[] attDesc = null;
@@ -57,22 +56,12 @@ public class AsyncTaskPull extends Activity {
 		addListenerOnButton();
 		txt = (TextView) findViewById(R.id.textView1);
 		txt2 = (TextView) findViewById(R.id.textView2);  
-		btn_start = (Button) findViewById(R.id.button1);
 		search = (Button) findViewById(R.id.search);
 		settings = (Button) findViewById(R.id.settings);
 		
 		this.asyncItemNummer = nummerHandlerAsync.getDBitem();
-		
-		btn_start.setOnClickListener(new View.OnClickListener() {
+		new ShowDialogAsyncTask().execute();
 
-			@Override
-			public void onClick(View v) {
-				addListenerOnButton();
-
-				btn_start.setEnabled(false);
-				new ShowDialogAsyncTask().execute();
-			}
-		});
 	}
 
 	@Override
@@ -206,7 +195,6 @@ public class AsyncTaskPull extends Activity {
 			txt.setText(attNaam[nummerHandlerAsync.getDBitem()]);
 			txt2.setText(attDesc[nummerHandlerAsync.getDBitem()]);
 
-			btn_start.setEnabled(true);
 		}
 	}
 

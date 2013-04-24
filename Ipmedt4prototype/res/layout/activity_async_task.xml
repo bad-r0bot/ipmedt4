@@ -70,7 +70,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/cat1item1"
+                    android:background="@drawable/categorieborder"
                     android:orientation="vertical" >
 
                 </LinearLayout>
@@ -79,19 +79,14 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/categorieborder"
                     android:orientation="vertical" >
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
-
-                    <Button
-                        android:id="@+id/button1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Laad" />
+                        android:text="..." />
 
                 </LinearLayout>
             </LinearLayout>
