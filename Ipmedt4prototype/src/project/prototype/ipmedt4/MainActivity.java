@@ -1,4 +1,4 @@
-package project.prototype.ipmedt4;
+ package project.prototype.ipmedt4;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,17 +9,37 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+// TODO: Auto-generated Javadoc
+/**
+ * De Mainactivity.
+ * Dit is de main opstart class
+ * 
+ * @author Lars Noorlander
+ */
 public class MainActivity extends Activity
 {	
+	
+	/** The settings. */
 	Button settings;
+	
+	/** The search. */
 	Button search;
+	
+	/** The categorie1. */
 	Button categorie1;
+	
+	/** The categorie2. */
 	Button categorie2;
+	
+	/** The categorie3. */
 	Button categorie3;
+	
+	/** The categorie4. */
 	Button categorie4;
-	Button categorie5;
-	Button categorie6;
 	//laadt de XML in
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -32,6 +52,9 @@ public class MainActivity extends Activity
 	}
 
 	//maak een menubalk
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -39,6 +62,10 @@ public class MainActivity extends Activity
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// verwijs de info knop door naar het info scherm.
@@ -51,6 +78,11 @@ public class MainActivity extends Activity
 		}
 	}
 
+	/**
+	 * Open info.
+	 *
+	 * @param view the view
+	 */
 	private void openInfo(View view) {
 
 		Intent myIntent = new Intent(view.getContext(), Info.class);
@@ -59,6 +91,9 @@ public class MainActivity extends Activity
 
 
 	//maak een listener die buttons de mogelijkheid geeft om ingedrukt te worden
+	/**
+	 * Adds the listener on button.
+	 */
 	public void addListenerOnButton() {
 
 		//koppel de button code aan een widget en voeg een onclicklistener toe
@@ -106,7 +141,7 @@ public class MainActivity extends Activity
 			@Override
 			public void onClick(View view) {
 
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				Intent myIntent = new Intent(view.getContext(), Categorie2.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});
@@ -126,30 +161,6 @@ public class MainActivity extends Activity
 		categorie4 = (Button) findViewById(R.id.categorie4);
 
 		categorie4.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
-				startActivityForResult(myIntent, 0);
-			}
-		});
-
-		categorie5 = (Button) findViewById(R.id.categorie5);
-
-		categorie5.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-
-				Intent myIntent = new Intent(view.getContext(), NotFound.class);
-				startActivityForResult(myIntent, 0);
-			}
-		});
-
-		categorie6 = (Button) findViewById(R.id.categorie6);
-
-		categorie6.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {

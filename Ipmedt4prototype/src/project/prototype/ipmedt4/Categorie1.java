@@ -9,23 +9,51 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+// TODO: Auto-generated Javadoc
 /**
- * De Class Categorie1.
+ * De Class voor categorie 1
+ * 
+ * @author Lars Noorlander
  */
 public class Categorie1 extends Activity
 {	
+	
+	/** The settings. */
 	Button settings;
+	
+	/** The search. */
 	Button search;
+	
+	/** The terug. */
 	Button terug;
+	
+	/** The item1. */
 	Button item1;
+	
+	/** The item2. */
 	Button item2;
+	
+	/** The item3. */
 	Button item3;
+	
+	/** The item4. */
 	Button item4;
+	
+	/** The item5. */
 	Button item5;
+	
+	/** The item6. */
 	Button item6;
+	
+	/** The item categorie. */
 	int itemCategorie = 0;
+	
+	/** The nummer handler categorie. */
 	ItemHandle nummerHandlerCategorie = new ItemHandle();
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -38,6 +66,9 @@ public class Categorie1 extends Activity
 	}
 
 	//maak een menubalk
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -46,6 +77,9 @@ public class Categorie1 extends Activity
 		return true;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// verwijs de info knop door naar het info scherm.
@@ -61,8 +95,8 @@ public class Categorie1 extends Activity
 
 	/**
 	 * Opent contact pagina.
-	 * 
-	 * @param view
+	 *
+	 * @param view the view
 	 */
 	private void openContact(View view) {
 
@@ -181,8 +215,8 @@ public class Categorie1 extends Activity
 	
 	/**
 	 * Sets itemCategorie.
-	 * 
-	 * @param num
+	 *
+	 * @param num the new nummer
 	 */
 	public void setNummer(int num)
 	{

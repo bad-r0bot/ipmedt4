@@ -9,11 +9,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+// TODO: Auto-generated Javadoc
+/**
+ * De Search.
+ * Dit is het zoekscherm
+ * 
+ * @author Lars Noorlander
+ */
 public class Search extends Activity
 {	
+	
+	/** The terug. */
 	Button terug;
+	
+	/** The search. */
 	Button search;
-
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -26,6 +40,9 @@ public class Search extends Activity
 	}
 
 	//maak een menubalk
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -33,6 +50,10 @@ public class Search extends Activity
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// verwijs de info knop door naar het info scherm.
@@ -46,11 +67,20 @@ public class Search extends Activity
 	}
 
 
+	/**
+	 * Openinfo.
+	 *
+	 * @param view the view
+	 */
 	private void openinfo(View view) {
 
 		Intent myIntent = new Intent(view.getContext(), Info.class);
 		startActivityForResult(myIntent, 0);
 	}
+	
+	/**
+	 * Adds the listener on button.
+	 */
 	public void addListenerOnButton() {
 		
 		search = (Button) findViewById(R.id.search);
@@ -77,6 +107,8 @@ public class Search extends Activity
 			}
 
 		});
+		
+
 
 	}
 }

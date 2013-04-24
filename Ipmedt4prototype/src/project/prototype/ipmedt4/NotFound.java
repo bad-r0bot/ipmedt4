@@ -7,10 +7,22 @@ import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+// TODO: Auto-generated Javadoc
+/**
+ * Not Found
+ * Dit is de class als een scherm niet gevonden word
+ * 
+ * @author Lars Noorlander & Tim van Dam
+ */
 public class NotFound extends Activity
 {	
+	
+	/** The terug. */
 	Button terug;
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -20,6 +32,9 @@ public class NotFound extends Activity
 		addListenerOnButton();
 	}
 
+	/**
+	 * Adds the listener on button.
+	 */
 	public void addListenerOnButton() {
 
 		terug = (Button) findViewById(R.id.terug);

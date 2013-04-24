@@ -94,7 +94,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Architectuur"
+                        android:text="Architectuur en traditie"
                         android:textColor="#04B404"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -124,37 +124,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Religie"
-                        android:textColor="#04B404"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/categorie5"
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:background="@drawable/sport"
-                        android:gravity="bottom|center_horizontal"
-                        android:shadowColor="#000000"
-                        android:shadowDx="3"
-                        android:shadowDy="3"
-                        android:shadowRadius="6"
-                        android:text="Sport"
-                        android:textColor="#04B404"
-                        android:textSize="40sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/categorie6"
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:background="@drawable/sociaal"
-                        android:gravity="bottom|center_horizontal"
-                        android:shadowColor="#000000"
-                        android:shadowDx="3"
-                        android:shadowDy="3"
-                        android:shadowRadius="6"
-                        android:text="Sociaal"
+                        android:text="Cultuur en ontspanning"
                         android:textColor="#04B404"
                         android:textSize="40sp"
                         android:textStyle="bold" />

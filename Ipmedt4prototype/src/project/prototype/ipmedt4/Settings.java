@@ -11,15 +11,35 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+// TODO: Auto-generated Javadoc
+/**
+ * De settings class
+ * In deze class staan de settings
+ * 
+ * @author Lars Noorlander
+ */
 public class Settings extends Activity
 {	
   
+	/** The terug. */
 	Button terug;
+	
+	/** The button1. */
 	Button button1;
+	
+	/** The button2. */
 	Button button2;
+	
+	/** The optie1. */
 	TextView optie1;
+	
+	/** The maps. */
+	Button maps;
 
 	//laden van XML
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -36,6 +56,9 @@ public class Settings extends Activity
 	}
 
 	//maak een menubalk
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
@@ -43,6 +66,10 @@ public class Settings extends Activity
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// verwijs de info knop door naar het info scherm.
@@ -56,12 +83,20 @@ public class Settings extends Activity
 	}
 
 
+	/**
+	 * Open info.
+	 *
+	 * @param view the view
+	 */
 	private void openInfo(View view) {
 
 		Intent myIntent = new Intent(view.getContext(), Info.class);
 		startActivityForResult(myIntent, 0);
 	}
 
+	/**
+	 * Adds the listener on button.
+	 */
 	public void addListenerOnButton() {
 
 		button1 = (Button) findViewById(R.id.button1);
@@ -103,15 +138,38 @@ public class Settings extends Activity
 
 		});
 		
+		maps = (Button) findViewById(R.id.maps);
+
+		maps.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+
+				Intent myIntent = new Intent(view.getContext(), NotFound.class);
+				startActivityForResult(myIntent, 0);
+			}
+
+		});
+		
 	}
-	   private void SavePreferences(String key, String value){
+	   
+   	/**
+   	 * Save preferences.
+   	 *
+   	 * @param key the key
+   	 * @param value the value
+   	 */
+   	private void SavePreferences(String key, String value){
 		    SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 		    SharedPreferences.Editor editor = sharedPreferences.edit();
 		    editor.putString(key, value);
 		    editor.commit();
 		   }
 		  
-		   private void LoadPreferences(){
+		   /**
+   		 * Load preferences.
+   		 */
+   		private void LoadPreferences(){
 		    SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 		    String strSavedMem1 = sharedPreferences.getString("MEM1", "");
 		    optie1.setText(strSavedMem1);

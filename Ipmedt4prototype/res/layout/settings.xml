@@ -133,15 +133,100 @@
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
 
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/TextView02"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="Google Maps"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/TextView01"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="Uit"
+                                android:textColor="#000000"
+                                android:textSize="30sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/maps"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Aan" />
+
+                            <Button
+                                android:id="@+id/Button02"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Uit" />
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:layout_weight="1" >
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
 
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/TextView04"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="Taal"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/TextView03"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="NL"
+                                android:textColor="#000000"
+                                android:textSize="30sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/Button03"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Nederlands" />
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>
