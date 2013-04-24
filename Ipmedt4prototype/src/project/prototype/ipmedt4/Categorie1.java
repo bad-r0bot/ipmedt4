@@ -23,8 +23,8 @@ public class Categorie1 extends Activity //Error hier
 	
 	int itemCategorie = 0;
 	
-	AsyncTaskPull asyncTask = new AsyncTaskPull();
-
+	ItemHandle nummerHandlerCategorie = new ItemHandle();
+	
 	//laadt de XML in
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -79,7 +79,7 @@ public class Categorie1 extends Activity //Error hier
 
 			@Override
 			public void onClick(View view) {
-				asyncTask.setItemVIAcategorie(0);
+				nummerHandlerCategorie.setDBitem(0);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
@@ -96,7 +96,7 @@ public class Categorie1 extends Activity //Error hier
 
 			@Override
 			public void onClick(View view) {
-				asyncTask.setItemVIAcategorie(1);
+				nummerHandlerCategorie.setDBitem(1);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
 
@@ -111,7 +111,6 @@ public class Categorie1 extends Activity //Error hier
 
 			@Override
 			public void onClick(View view) {
-				asyncTask.setItemVIAcategorie(2);
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
@@ -182,6 +181,19 @@ public class Categorie1 extends Activity //Error hier
 				finish();
 			}
 		});
+	}
+	
+	public void setNummer(int num)
+	{
+		itemCategorie = num;
+		System.out.println("99- Categorie1 get item nummer: " + itemCategorie);
+	}
+	
+	public int getNummerTerug()
+	{
+		System.out.println("100- Categorie1 get item nummer: " + itemCategorie);
+		return itemCategorie;
+		
 	}
 	
 }

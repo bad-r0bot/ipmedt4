@@ -45,18 +45,18 @@ public class AsyncTaskPull extends Activity {
 	Button search;
 	Button terug;
 
-	 int asyncItemNummer;
+	int asyncItemNummer;
 
+	ItemHandle nummerHandlerAsync = new ItemHandle();
 	JSONParser jParser = new JSONParser();
 	//laadt de XML in
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		System.out.println("3- Async: wat is Item nummer bij OnCreate? " + asyncItemNummer);
+		
 		//koppel de xml aan de java
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_async_task);
-
 
 		addListenerOnButton();
 		txt = (TextView) findViewById(R.id.textView1);
@@ -69,9 +69,13 @@ public class AsyncTaskPull extends Activity {
 
 		settings = (Button) findViewById(R.id.settings);
 		
-		asyncItemNummer = getItem();
+		//asyncItemNummer = getItem();
 		
-		System.out.println("5- Async: wat is Item bij OnCreate (na get call): " + asyncItemNummer);
+		//System.out.println("5- Async: wat is Item bij OnCreate (na get call): " + asyncItemNummer);
+		
+		this.asyncItemNummer = nummerHandlerAsync.getDBitem();
+		
+		System.out.println("3- Async: wat is Item nummer volgens OnCreate? " + asyncItemNummer);
 		
 		btn_start.setOnClickListener(new View.OnClickListener() {
 
@@ -215,8 +219,8 @@ public class AsyncTaskPull extends Activity {
 
 
 			System.out.println("6- Async: Ik pak de text (onpostexecute): " + asyncItemNummer);
-			txt.setText(attNaam[getItem()]);
-			txt2.setText(attDesc[getItem()]);
+			txt.setText(attNaam[nummerHandlerAsync.getDBitem()]);
+			txt2.setText(attDesc[nummerHandlerAsync.getDBitem()]);
 
 			btn_start.setEnabled(true);
 		}
@@ -265,16 +269,5 @@ public class AsyncTaskPull extends Activity {
 		
 	}
 	
-	public int getItem() {
-		System.out.println("4- Async: getItem: " + asyncItemNummer);
-		return asyncItemNummer;
-	}
-	
-	
-	public void setItemVIAcategorie(int nummerItem)
-	{
-		System.out.println("?- Async: setItemVIAcategorie: " + asyncItemNummer);
-		asyncItemNummer = nummerItem;
-	}
 }
 
