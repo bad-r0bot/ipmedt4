@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * The Class AsyncTaskPull.
+ * De Class AsyncTaskPull.
  *
  * @author Jim Schoorl, Frans van Nijnanten
  */
@@ -107,7 +107,7 @@ public class AsyncTaskPull extends Activity {
 	}
 
 	/**
-	 * The Class ShowDialogAsyncTask.
+	 * De Class ShowDialogAsyncTask.
 	 */
 	private class ShowDialogAsyncTask extends AsyncTask<Void, Void, String>
 	{
@@ -131,7 +131,7 @@ public class AsyncTaskPull extends Activity {
 
 			String result = "";
 
-			// In test.php goes the SQL query.
+			// In test.php goes De SQL query.
 			String URL = "http://timvandam.nl/App/test.php";
 
 			try{
