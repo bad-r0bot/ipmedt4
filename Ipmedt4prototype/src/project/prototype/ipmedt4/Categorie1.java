@@ -9,7 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-public class Categorie1 extends Activity //Error hier
+/**
+ * De Class Categorie1.
+ */
+public class Categorie1 extends Activity
 {	
 	Button settings;
 	Button search;
@@ -20,12 +23,9 @@ public class Categorie1 extends Activity //Error hier
 	Button item4;
 	Button item5;
 	Button item6;
-	
 	int itemCategorie = 0;
-	
 	ItemHandle nummerHandlerCategorie = new ItemHandle();
 	
-	//laadt de XML in
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -34,17 +34,13 @@ public class Categorie1 extends Activity //Error hier
 		setContentView(R.layout.categorie1);
 
 		addListenerOnButton();
-
 		//laad het listview object
-
 	}
-
 
 	//maak een menubalk
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-
 		//vul de menubalk in
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
@@ -63,20 +59,27 @@ public class Categorie1 extends Activity //Error hier
 	}
 
 
+	/**
+	 * Opent contact pagina.
+	 * 
+	 * @param view
+	 */
 	private void openContact(View view) {
 
 		Intent myIntent = new Intent(view.getContext(), Info.class);
 		startActivityForResult(myIntent, 0);
 	}
 
-	//maak een listener die buttons de mogelijkheid geeft om ingedrukt te worden
+	/**
+	 * Maakt een listener die buttons de mogelijkheid geeft om ingedrukt te worden.
+	 * Zo kan in deze layout nog op Settings en Search worden gedrukt.
+	 */
 	public void addListenerOnButton() {
 
 
 		item1 = (Button) findViewById(R.id.item1);
-
-		item1.setOnClickListener(new OnClickListener() {
-
+		item1.setOnClickListener(new OnClickListener() 
+		{
 			@Override
 			public void onClick(View view) {
 				nummerHandlerCategorie.setDBitem(0);
@@ -85,17 +88,14 @@ public class Categorie1 extends Activity //Error hier
 
 				System.out.println("Categorie - item 1: ik setItem op 0");
 			}
-
-
-
 		});
 
 		item2 = (Button) findViewById(R.id.item2);
-
-		item2.setOnClickListener(new OnClickListener() {
-
+		item2.setOnClickListener(new OnClickListener() 
+		{
 			@Override
-			public void onClick(View view) {
+			public void onClick(View view) 
+			{
 				nummerHandlerCategorie.setDBitem(1);
 				Intent myIntent = new Intent(view.getContext(), AsyncTaskPull.class);
 				startActivityForResult(myIntent, 0);
@@ -106,9 +106,8 @@ public class Categorie1 extends Activity //Error hier
 		});
 
 		item3 = (Button) findViewById(R.id.item3);
-
-		item3.setOnClickListener(new OnClickListener() {
-
+		item3.setOnClickListener(new OnClickListener() 
+		{
 			@Override
 			public void onClick(View view) {
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
@@ -117,12 +116,11 @@ public class Categorie1 extends Activity //Error hier
 		});
 
 		item4 = (Button) findViewById(R.id.item4);
-
 		item4.setOnClickListener(new OnClickListener() {
 
 			@Override
-			public void onClick(View view) {
-
+			public void onClick(View view) 
+			{
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
@@ -131,8 +129,8 @@ public class Categorie1 extends Activity //Error hier
 		item5 = (Button) findViewById(R.id.item5);
 		item5.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View view) {
-
+			public void onClick(View view) 
+			{
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
@@ -141,8 +139,8 @@ public class Categorie1 extends Activity //Error hier
 		item6 = (Button) findViewById(R.id.item6);
 		item6.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View view) {
-
+			public void onClick(View view) 
+			{
 				Intent myIntent = new Intent(view.getContext(), NotFound.class);
 				startActivityForResult(myIntent, 0);
 			}
@@ -150,14 +148,12 @@ public class Categorie1 extends Activity //Error hier
 
 		settings = (Button) findViewById(R.id.settings);
 		settings.setOnClickListener(new OnClickListener() {
-			//koppel de button aan een nieuw xml scherm wat opent
 			@Override
 			public void onClick(View view) {
 
 				Intent myIntent = new Intent(view.getContext(), Settings.class);
 				startActivityForResult(myIntent, 0);
 			}
-
 		});
 
 		search = (Button) findViewById(R.id.search);
@@ -183,17 +179,23 @@ public class Categorie1 extends Activity //Error hier
 		});
 	}
 	
+	/**
+	 * Sets itemCategorie.
+	 * 
+	 * @param num
+	 */
 	public void setNummer(int num)
 	{
 		itemCategorie = num;
-		System.out.println("99- Categorie1 get item nummer: " + itemCategorie);
 	}
 	
+	/**
+	 * Gets itemCategorie.
+	 * 
+	 * @return itemCategorie terug
+	 */
 	public int getNummerTerug()
 	{
-		System.out.println("100- Categorie1 get item nummer: " + itemCategorie);
 		return itemCategorie;
-		
 	}
-	
 }

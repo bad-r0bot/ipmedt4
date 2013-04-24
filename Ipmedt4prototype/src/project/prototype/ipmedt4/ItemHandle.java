@@ -1,27 +1,44 @@
 package project.prototype.ipmedt4;
 
-
-// Deze Class behoudt de nummer van de knop/item die je indrukt in Categorie..
+/**
+ * De Class ItemHandle.
+ * Deze Class behoudt de nummer van de knop/item die je indrukt in Categorie.
+ * Het nummer wordt vervolgens in AsyncTaskPull.java opgeroepen via de getDBitem methode.
+ * 
+ * @author Jim Schoorl, Frans van Nijnanten
+ */
 public final class ItemHandle {
 
 	private static int dbItem;
 	static Categorie1 catDBitem = new Categorie1();
 	
+	/**
+	 * De main van ItemHandle
+	 * Hier wordt dbItem geset via Categorie.
+	 */
 	public static void main(String[] args)
 	{
 		dbItem = catDBitem.getNummerTerug();
 	}
 	
+	/**
+	 * Sets the dbItem.
+	 *
+	 * @param nummer is de nieuwe dbItem
+	 */
 	public void setDBitem(int nummer) 
 	{
 		
 		ItemHandle.dbItem = nummer;
-		System.out.println("666- set item nummer: " + dbItem);
 	}
 	
+	/**
+	 * Stuurt dbItem naar andere klassen.
+	 * 
+	 * @return de dbItem
+	 */
 	public int getDBitem()
 	{
-		System.out.println("777- get item nummer: " + dbItem);
 		return dbItem;
 		
 	}
