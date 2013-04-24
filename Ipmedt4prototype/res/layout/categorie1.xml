@@ -79,7 +79,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Pont Roman"
+                        android:text="Romeinse Brug"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -94,7 +94,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Stèle deTrémeur"
+                        android:text="Gedenksteen van Saint-Tremeur"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -109,7 +109,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Dolmen de Sainte-Anne"
+                        android:text="Menhir van Kerfland"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -124,7 +124,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Menhir de Lanveur"
+                        android:text="Menhir van Lanveur"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -139,7 +139,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Dolmens de Kerfuens"
+                        android:text="Dolmens van Kerfuens"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />
@@ -154,7 +154,7 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:shadowRadius="6"
-                        android:text="Tombeau de Francois II de Bretagne"
+                        android:text="Graf van Francois II van Bretagne"
                         android:textColor="#FF0040"
                         android:textSize="40sp"
                         android:textStyle="bold" />

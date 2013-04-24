@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,11 +45,13 @@ public class AsyncTaskPull extends Activity {
 	Button terug;
 	int asyncItemNummer;
 	ItemHandle nummerHandlerAsync = new ItemHandle();
-	
+
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		
+
 		//koppel de xml aan de java
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_async_task);
@@ -58,9 +61,11 @@ public class AsyncTaskPull extends Activity {
 		txt2 = (TextView) findViewById(R.id.textView2);  
 		search = (Button) findViewById(R.id.search);
 		settings = (Button) findViewById(R.id.settings);
-		
+
 		this.asyncItemNummer = nummerHandlerAsync.getDBitem();
 		new ShowDialogAsyncTask().execute();
+
+
 
 	}
 
@@ -70,10 +75,10 @@ public class AsyncTaskPull extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		
+
 		//Verwijst de info knop door naar het info scherm.
 		switch (item.getItemId()) {
 		case R.id.info:
@@ -100,12 +105,14 @@ public class AsyncTaskPull extends Activity {
 	 */
 	private class ShowDialogAsyncTask extends AsyncTask<Void, Void, String>
 	{
+
+
 		@Override
 		protected void onPreExecute() 
 		{
 			//Update de UI zodra de task is uitgevoerd.
 			super.onPreExecute();
-			
+
 			// Set txt naar Connecting en roept de volgende task toe.
 			Toast.makeText(AsyncTaskPull.this,
 					"Invoke onPreExecute()", Toast.LENGTH_SHORT).show();
@@ -121,7 +128,7 @@ public class AsyncTaskPull extends Activity {
 			String result = "";
 
 			// In test.php goes De SQL query.
-			String URL = "http://timvandam.nl/App/test.php";
+			String URL = "http://timvandam.nl/App/connect.php";
 
 			try{
 				HttpClient httpclient = new DefaultHttpClient();
@@ -180,6 +187,10 @@ public class AsyncTaskPull extends Activity {
 			}
 
 			return returnString; 
+
+
+
+
 		}  
 
 		/**
@@ -191,9 +202,32 @@ public class AsyncTaskPull extends Activity {
 			super.onPostExecute(result);
 
 			Toast.makeText(AsyncTaskPull.this,"Invoke onPostExecute()", Toast.LENGTH_SHORT).show();
-		
+
 			txt.setText(attNaam[nummerHandlerAsync.getDBitem()]);
 			txt2.setText(attDesc[nummerHandlerAsync.getDBitem()]);
+
+			LinearLayout plaatje=(LinearLayout)findViewById(R.id.plaatje);
+
+			switch(nummerHandlerAsync.getDBitem()) {
+			case 0:
+				plaatje.setBackgroundResource(R.drawable.cat1item4);
+				break;
+			case 1:
+				plaatje.setBackgroundResource(R.drawable.cat1item5);
+				break;
+			case 2:
+				plaatje.setBackgroundResource(R.drawable.cat1item1);
+				break;
+			case 3:
+				plaatje.setBackgroundResource(R.drawable.cat1item3);
+				break;
+			case 4:
+				plaatje.setBackgroundResource(R.drawable.cat1item2);
+				break;
+			case 5:
+				plaatje.setBackgroundResource(R.drawable.cat1item6);
+				break;
+			}
 
 		}
 	}
@@ -242,8 +276,8 @@ public class AsyncTaskPull extends Activity {
 
 		});
 
-		
+
 	}
-	
+
 }
 

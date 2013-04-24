@@ -67,9 +67,9 @@
                 android:orientation="vertical" >
 
                 <LinearLayout
+                    android:id="@+id/plaatje"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="2"
+                    android:layout_height="200dp"
                     android:background="@drawable/categorieborder"
                     android:orientation="vertical" >
 
@@ -78,7 +78,6 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1"
                     android:background="@drawable/categorieborder"
                     android:orientation="vertical" >
 
